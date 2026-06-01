@@ -324,13 +324,12 @@ function sliderUpdate(krwPrice) {
   // Excel formula: Total = (car + loading + transport + insurance + port) * 1.32
   //                        + customs + unloading + commission + extras
   // Duty = (car + loading + transport + insurance) * 0.10
-  // VAT  = (car + loading + transport + insurance + duty + port) * 0.20
+  // Matches Excel: =SUM(car+loading+transport+insurance+port)*1.32 + customs+unloading+commission+extras
 
-  const dutyBase = carEur + loading + transport + insurance;
-  const duty     = dutyBase * 0.10;
-  const vatBase  = dutyBase + duty + port;
-  const vat      = vatBase * 0.20;
-  const taxes    = duty + vat;
+  const taxBase = carEur + loading + transport + insurance + port;
+  const duty    = taxBase * 0.10;
+  const vat     = taxBase * 1.10 * 0.20;
+  const taxes   = duty + vat;
 
   // Extras
   let extras = 0;
@@ -338,7 +337,7 @@ function sliderUpdate(krwPrice) {
   if (document.getElementById('s-gas').checked)          extras += 153;
   if (document.getElementById('s-sofia').checked)        extras += 200;
 
-  const total = carEur + loading + transport + insurance + port + taxes + customs + unloading + commission + extras;
+  const total = taxBase * 1.32 + customs + unloading + commission + extras;
 
   document.getElementById('sr-car').textContent    = fmtEur(carEur);
   document.getElementById('sr-taxes').textContent  = fmtEur(taxes);
