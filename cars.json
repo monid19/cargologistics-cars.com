@@ -1,66 +1,34 @@
 [
   {
     "id": 1,
-    "brand": "Hyundai",
-    "model": "Tucson 2.0 GDi",
-    "price": "15 200 €",
-    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Hyundai+Tucson",
-    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+    "brand": "Honda",
+    "model": "Accord 10th Gen 1.5 Turbo (2019)",
+    "price": "17 290 €",
+    "image": "https://ci.encar.com/carpicture/carpicture10/pic4110/41106495_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png&t=20260423081506",
+    "encarUrl": "https://fem.encar.com/cars/detail/41108026?pageid=fc_carsearch&listAdvType=normal&carid=41108026&view_type=hs_ad&adv_attribute=hs_ad"
   },
   {
     "id": 2,
-    "brand": "Kia",
-    "model": "Sportage 1.6 T-GDi",
-    "price": "14 800 €",
-    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Kia+Sportage",
-    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+    "brand": "Jeep",
+    "model": "Compass 2.4 Limited 1st Gen (2016)",
+    "price": "10 180 €",
+    "image": "https://ci.encar.com/carpicture/carpicture02/pic4222/42229111_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png&t=20260624160453",
+    "encarUrl": "https://fem.encar.com/cars/detail/42229113?pageid=fc_carsearch&listAdvType=normal&carid=42229113&view_type=hs_ad&adv_attribute=hs_ad"
   },
   {
     "id": 3,
-    "brand": "Hyundai",
-    "model": "Santa Fe 2.2 CRDi",
-    "price": "18 500 €",
-    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Hyundai+Santa+Fe",
-    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+    "brand": "Kia",
+    "model": "Stinger 3.3 Turbo AWD GT (2019)",
+    "price": "14 680 €",
+    "image": "https://ci.encar.com/carpicture/carpicture06/pic4226/42264969_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png&t=20260629104630",
+    "encarUrl": "https://fem.encar.com/cars/detail/42267084?pageid=dc_carsearch&listAdvType=normal&carid=42267084&view_type=hs_ad&adv_attribute=hs_ad"
   },
   {
     "id": 4,
-    "brand": "Genesis",
-    "model": "G70 2.0T",
-    "price": "22 300 €",
-    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Genesis+G70",
-    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
-  },
-  {
-    "id": 5,
     "brand": "Kia",
-    "model": "K5 (Optima) 2.0",
-    "price": "13 600 €",
-    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Kia+K5",
-    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
-  },
-  {
-    "id": 6,
-    "brand": "Hyundai",
-    "model": "Sonata 2.5 GDi",
-    "price": "12 900 €",
-    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Hyundai+Sonata",
-    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
-  },
-  {
-    "id": 7,
-    "brand": "Genesis",
-    "model": "GV70 2.5T",
-    "price": "28 400 €",
-    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Genesis+GV70",
-    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
-  },
-  {
-    "id": 8,
-    "brand": "Kia",
-    "model": "Sorento 2.2 CRDi",
-    "price": "19 700 €",
-    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Kia+Sorento",
-    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+    "model": "K5 3rd Gen 2.0 Trendy (2020)",
+    "price": "12 730 €",
+    "image": "https://ci.encar.com/carpicture/carpicture01/pic4211/42113551_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png&t=20260602202055",
+    "encarUrl": "https://fem.encar.com/cars/detail/42113551?pageid=dc_carsearch&listAdvType=normal&carid=42113551&view_type=normal&adv_attribute"
   }
 ]
