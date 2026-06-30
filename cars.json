@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "brand": "Hyundai",
+    "model": "Tucson 2.0 GDi",
+    "price": "15 200 €",
+    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Hyundai+Tucson",
+    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+  },
+  {
+    "id": 2,
+    "brand": "Kia",
+    "model": "Sportage 1.6 T-GDi",
+    "price": "14 800 €",
+    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Kia+Sportage",
+    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+  },
+  {
+    "id": 3,
+    "brand": "Hyundai",
+    "model": "Santa Fe 2.2 CRDi",
+    "price": "18 500 €",
+    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Hyundai+Santa+Fe",
+    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+  },
+  {
+    "id": 4,
+    "brand": "Genesis",
+    "model": "G70 2.0T",
+    "price": "22 300 €",
+    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Genesis+G70",
+    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+  },
+  {
+    "id": 5,
+    "brand": "Kia",
+    "model": "K5 (Optima) 2.0",
+    "price": "13 600 €",
+    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Kia+K5",
+    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+  },
+  {
+    "id": 6,
+    "brand": "Hyundai",
+    "model": "Sonata 2.5 GDi",
+    "price": "12 900 €",
+    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Hyundai+Sonata",
+    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+  },
+  {
+    "id": 7,
+    "brand": "Genesis",
+    "model": "GV70 2.5T",
+    "price": "28 400 €",
+    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Genesis+GV70",
+    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+  },
+  {
+    "id": 8,
+    "brand": "Kia",
+    "model": "Sorento 2.2 CRDi",
+    "price": "19 700 €",
+    "image": "https://via.placeholder.com/400x260/1c5228/ffffff?text=Kia+Sorento",
+    "encarUrl": "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch"
+  }
+]

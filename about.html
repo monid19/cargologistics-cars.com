@@ -48,9 +48,9 @@
 <!-- NAV -->
 <nav>
     <a class="nav-logo" href="index.html"><img src="Logo-3.png" alt="Cargo Logistics"></a>
+    <button class="nav-toggle" aria-label="Меню"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-      
-      <li><a href="index.html#calculator">Калкулатор</a></li>
+      <li><a href="calculator.html">Калкулатор</a></li>
       <li><a href="about.html">За нас</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="index.html#contact" class="nav-cta">Запитване</a></li>
@@ -298,7 +298,7 @@
       <li><a href="index.html">Начало</a></li>
       <li><a href="index.html#how">Как работи</a></li>
       <li><a href="index.html#services">Услуги</a></li>
-      <li><a href="index.html#calculator">Калкулатор</a></li>
+      <li><a href="calculator.html">Калкулатор</a></li>
       <li><a href="about.html">За нас</a></li>
       <li><a href="index.html#contact">Контакти</a></li>
     </ul>
@@ -312,6 +312,14 @@ const obs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+// Mobile nav toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+}
 </script>
 </body>
 </html>
