@@ -18,11 +18,18 @@ import requests
 MAX_CARS = 12
 
 SEARCH_CONFIG = {
-    "min_price_man": 500,    # 만원 → ~2 800 €
-    "max_price_man": 5000,   # 만원 → ~28 000 €
+    "min_price_man": 1000,   # 만원 → ~5 500 € (excludes micro/cheap cars)
+    "max_price_man": 8000,   # 만원 → ~44 000 €
     "max_mileage":   150000,
     "min_year":      2015,
-    "fetch_count":   40,
+    "fetch_count":   60,
+}
+
+# Korean model group names to skip (vans, buses, micro cars)
+EXCLUDE_MODELS = {
+    "캐스퍼", "레이", "모닝", "다마스", "라보",          # micro/kei cars
+    "스타렉스", "그랜드 스타렉스", "더 뉴 그랜드 스타렉스",  # vans/buses
+    "카운티", "마이티", "포터", "봉고",                   # trucks/commercial
 }
 
 MODEL_MAP = {
@@ -172,8 +179,9 @@ def fetch_new_listings() -> list:
                 filtered = [
                     item for item in results
                     if (cfg["min_price_man"] <= item.get("Price", 0) <= cfg["max_price_man"]
-                        and item.get("Mileage", 0)  <= cfg["max_mileage"]
-                        and item.get("Year",    0)  >= cfg["min_year"])
+                        and item.get("Mileage", 0) <= cfg["max_mileage"]
+                        and item.get("Year",    0) >= cfg["min_year"]
+                        and item.get("ModelGroup", "") not in EXCLUDE_MODELS)
                 ]
                 return filtered
 
