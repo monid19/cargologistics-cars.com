@@ -2,97 +2,97 @@
   {
     "id": 1,
     "brand": "Kia",
-    "model": "카니발 4세대 가솔린 9인승 하이리무진 (202101.0)",
+    "model": "Carnival 4th Gen Gasoline 9-Seat (2021)",
     "price": "31 890 €",
-    "image": "https://ci.encar.com//carpicture08/pic3878/38781023_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture08/pic3878/38781023_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/38792807"
   },
   {
     "id": 2,
     "brand": "Hyundai",
-    "model": "캐스퍼 터보 스마트 (202307.0)",
+    "model": "Casper Turbo Smart (2023)",
     "price": "13 520 €",
-    "image": "https://ci.encar.com//carpicture07/pic4207/42074818_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture07/pic4207/42074818_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42077771"
   },
   {
     "id": 3,
     "brand": "Kia",
-    "model": "EV6 롱레인지 (202210.0)",
+    "model": "EV6 Long Range (2022)",
     "price": "25 250 €",
-    "image": "https://ci.encar.com//carpicture03/pic4223/42237736_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture03/pic4223/42237736_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42240916"
   },
   {
     "id": 4,
     "brand": "Hyundai",
-    "model": "캐스퍼 모던 (202211.0)",
+    "model": "Casper Modern (2022)",
     "price": "12 700 €",
-    "image": "https://ci.encar.com//carpicture10/pic4210/42100419_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture10/pic4210/42100419_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42101346"
   },
   {
     "id": 5,
     "brand": "Hyundai",
-    "model": "캐스퍼 터보 스마트 (202306.0)",
+    "model": "Casper Turbo Smart (2023)",
     "price": "14 180 €",
-    "image": "https://ci.encar.com//carpicture08/pic4218/42185096_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture08/pic4218/42185096_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42185886"
   },
   {
     "id": 6,
     "brand": "Hyundai",
-    "model": "투싼 (NX4) 디젤 2.0 4WD (202202.0)",
+    "model": "Tucson NX4 Diesel 2.0 4WD (2022)",
     "price": "18 370 €",
-    "image": "https://ci.encar.com//carpicture03/pic4193/41930792_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture03/pic4193/41930792_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/41935305"
   },
   {
     "id": 7,
     "brand": "Hyundai",
-    "model": "투싼 (NX4) 디젤 2.0 4WD (202201.0)",
+    "model": "Tucson NX4 Diesel 2.0 4WD (2022)",
     "price": "18 600 €",
-    "image": "https://ci.encar.com//carpicture03/pic4193/41930778_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture03/pic4193/41930778_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/41933930"
   },
   {
     "id": 8,
     "brand": "Hyundai",
-    "model": "더 뉴 팰리세이드 디젤 2.2 2WD (202405.0)",
+    "model": "Palisade Diesel 2.2 2WD (2024)",
     "price": "33 310 €",
-    "image": "https://ci.encar.com//carpicture05/pic4225/42254935_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture05/pic4225/42254935_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42271590"
   },
   {
     "id": 9,
     "brand": "Kia",
-    "model": "더 뉴 쏘렌토 4세대 HEV 1.6 2WD (202502.0)",
+    "model": "Sorento HEV 1.6 2WD (2025)",
     "price": "33 690 €",
-    "image": "https://ci.encar.com//carpicture09/pic4219/42195569_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture09/pic4219/42195569_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42197567"
   },
   {
     "id": 10,
     "brand": "Hyundai",
-    "model": "더 뉴 그랜드 스타렉스 어반 9인승 (202012.0)",
+    "model": "Grand Starex Urban 9-Seat (2020)",
     "price": "18 600 €",
-    "image": "https://ci.encar.com//carpicture06/pic4216/42165865_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture06/pic4216/42165865_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42177106"
   },
   {
     "id": 11,
     "brand": "Kia",
-    "model": "셀토스 가솔린 1.6 터보 2WD (201908.0)",
+    "model": "Seltos Gasoline 1.6 Turbo 2WD (2019)",
     "price": "16 130 €",
-    "image": "https://ci.encar.com//carpicture06/pic4216/42167993_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture06/pic4216/42167993_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42177430"
   },
   {
     "id": 12,
     "brand": "Hyundai",
-    "model": "팰리세이드 디젤 2.2 2WD (202201.0)",
+    "model": "Palisade Diesel 2.2 2WD (2022)",
     "price": "20 610 €",
-    "image": "https://ci.encar.com//carpicture06/pic4216/42165390_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "image": "https://ci.encar.com/carpicture06/pic4216/42165390_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42165415"
   }
 ]

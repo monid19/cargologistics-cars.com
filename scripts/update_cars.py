@@ -189,7 +189,7 @@ def photo_url(item: dict) -> str:
     photos = item.get("Photos", [])
     if not photos:
         return ""
-    loc = photos[0].get("location", "")
+    loc = photos[0].get("location", "").lstrip("/")
     return (
         f"https://ci.encar.com/{loc}"
         f"?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center"
@@ -265,12 +265,17 @@ def main() -> None:
         raw_brand = item.get("Manufacturer", "")
         brand     = BRAND_MAP.get(raw_brand, raw_brand)
         raw_model = (item.get("ModelGroup", "") or item.get("Model", "") or "").strip()
-        model     = MODEL_MAP.get(raw_model, raw_model)
+        # Try longest-match first in MODEL_MAP for compound Korean names
+        model = raw_model
+        for k, v in sorted(MODEL_MAP.items(), key=lambda x: -len(x[0])):
+            if k in raw_model:
+                model = v
+                break
         badge     = (item.get("Badge",  "") or "").strip()
         # Year comes as YYYYMM.0 — extract just the 4-digit year
         raw_year  = str(item.get("Year", "") or "")
         year      = raw_year[:4] if len(raw_year) >= 4 else raw_year
-        model_str = f"{model} {badge} ({year})".strip()
+        model_str = f"{model} {badge} ({year})".strip() if badge else f"{model} ({year})"
 
         added.append({
             "id":       len(active) + len(added) + 1,
