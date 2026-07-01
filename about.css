@@ -526,8 +526,14 @@
   .why-card:hover { background: #eef8e8; }
   
   .wc-icon {
-    font-size: 1.5rem;
     margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .wc-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
     display: block;
   }
   
