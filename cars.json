@@ -62,5 +62,37 @@
     "price": "20 610 €",
     "image": "https://ci.encar.com/carpicture06/pic4216/42165390_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42165415"
+  },
+  {
+    "id": 9,
+    "brand": "Genesis",
+    "model": "GV80 3.5T 가솔린 AWD (2023)",
+    "price": "41 530 €",
+    "image": "https://ci.encar.com/carpicture05/pic4215/42153245_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42162774"
+  },
+  {
+    "id": 10,
+    "brand": "Kia",
+    "model": "Mohave 디젤 3.0 4WD (2016)",
+    "price": "15 390 €",
+    "image": "https://ci.encar.com/carpicture08/pic4178/41783499_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/41795410"
+  },
+  {
+    "id": 11,
+    "brand": "Kia",
+    "model": "K9 3.3 GDI AWD (2021)",
+    "price": "23 900 €",
+    "image": "https://ci.encar.com/carpicture01/pic4201/42015536_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42016029"
+  },
+  {
+    "id": 12,
+    "brand": "Kia",
+    "model": "Carnival 가솔린 9인승 노블레스 (2022)",
+    "price": "33 680 €",
+    "image": "https://ci.encar.com/carpicture01/pic4201/42015592_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42017130"
   }
 ]
