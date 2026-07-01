@@ -874,6 +874,12 @@
   
   .fg { display: flex; flex-direction: column; gap: 0.35rem; }
   
+  .label-opt {
+    font-weight: 400;
+    opacity: 0.55;
+    font-size: 0.75em;
+  }
+
   .fg label {
     font-size: 0.65rem;
     font-weight: 600;
@@ -1040,13 +1046,31 @@
     color: var(--white);
   }
 
+  .cars-scroll-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #c8e6b8 transparent;
+    padding-bottom: 0.75rem;
+    margin: 0 -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .cars-scroll-wrap::-webkit-scrollbar { height: 4px; }
+  .cars-scroll-wrap::-webkit-scrollbar-track { background: transparent; }
+  .cars-scroll-wrap::-webkit-scrollbar-thumb { background: #c8e6b8; border-radius: 4px; }
+
   .cars-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    display: flex;
+    gap: 1.25rem;
+    width: max-content;
   }
 
   .car-card {
+    width: 270px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
     background: var(--off-white);
     border: 1px solid #e0eeda;
     border-radius: 10px;
@@ -1058,6 +1082,22 @@
     box-shadow: 0 12px 36px rgba(28,82,40,0.12);
     transform: translateY(-4px);
   }
+
+  .car-card.car-placeholder {
+    border: 2px dashed #c8e6b8;
+    background: #f7fbf4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 310px;
+    color: #a0bfa0;
+    cursor: default;
+  }
+  .car-card.car-placeholder:hover { transform: none; box-shadow: none; }
+  .car-placeholder-icon { font-size: 2rem; opacity: 0.4; }
+  .car-placeholder-text { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.5; }
 
   .car-img {
     width: 100%;
@@ -1295,11 +1335,6 @@
     .form-row { grid-template-columns: 1fr; }
     .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
     .stat-item { border-right: none; margin-right: 0; padding-right: 0; }
-    .cars-grid { grid-template-columns: repeat(2, 1fr); }
     .testimonials-grid { grid-template-columns: 1fr; }
     .blog-grid { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 600px) {
-    .cars-grid { grid-template-columns: 1fr; }
   }

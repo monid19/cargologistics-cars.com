@@ -30,5 +30,37 @@
     "price": "12 730 €",
     "image": "https://ci.encar.com/carpicture/carpicture01/pic4211/42113551_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png&t=20260602202055",
     "encarUrl": "https://fem.encar.com/cars/detail/42113551?pageid=dc_carsearch&listAdvType=normal&carid=42113551&view_type=normal&adv_attribute"
+  },
+  {
+    "id": 5,
+    "brand": "Mercedes-Benz",
+    "model": "E220 CDI Avantgarde W212 (2015)",
+    "price": "12 060 €",
+    "image": "https://ci.encar.com/carpicture/carpicture06/pic4226/42268553_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png&t=20260630110154",
+    "encarUrl": "https://fem.encar.com/cars/detail/42268553?pageid=fc_carsearch&listAdvType=word&carid=42268553&view_type=checked"
+  },
+  {
+    "id": 6,
+    "brand": "BMW",
+    "model": "530i xDrive M Sport G30 (2018)",
+    "price": "19 930 €",
+    "image": "https://ci.encar.com/carpicture/carpicture08/pic4218/42182824_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png&t=20260616100221",
+    "encarUrl": "https://fem.encar.com/cars/detail/42182824?pageid=fc_carsearch&listAdvType=word&carid=42182824&view_type=normal"
+  },
+  {
+    "id": 7,
+    "brand": "Toyota",
+    "model": "Camry XV70 2.5 (2019)",
+    "price": "22 780 €",
+    "image": "https://ci.encar.com/carpicture/carpicture01/pic4211/42119404_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png&t=20260604191227",
+    "encarUrl": "https://fem.encar.com/cars/detail/42119404?pageid=fc_carsearch&listAdvType=word&carid=42119404&view_type=checked"
+  },
+  {
+    "id": 8,
+    "brand": "Audi",
+    "model": "A6 C8 45 TFSI Quattro Premium (2021)",
+    "price": "26 220 €",
+    "image": "https://ci.encar.com/carpicture/carpicture09/pic4159/41595512_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png&t=20260304153748",
+    "encarUrl": "https://fem.encar.com/cars/detail/41595516?pageid=fc_carsearch&listAdvType=normal&carid=41595516&view_type=hs_ad&adv_attribute=hs_ad"
   }
 ]

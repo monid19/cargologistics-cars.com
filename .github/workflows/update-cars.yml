@@ -1,0 +1,37 @@
+name: Update car listings
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # runs daily at 07:00 UTC (10:00 Bulgarian time)
+  workflow_dispatch:        # also allows manual trigger from GitHub Actions tab
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run update script
+        run: python scripts/update_cars.py
+
+      - name: Commit and push if cars.json changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cars.json
+          git diff --staged --quiet && echo "No changes." || (
+            git commit -m "Auto-update car listings [skip ci]"
+            git push
+          )
