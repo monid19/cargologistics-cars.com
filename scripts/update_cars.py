@@ -25,6 +25,32 @@ SEARCH_CONFIG = {
     "fetch_count":   40,
 }
 
+MODEL_MAP = {
+    # Hyundai
+    "아반떼": "Elantra", "쏘나타": "Sonata", "그랜저": "Grandeur",
+    "투싼": "Tucson", "싼타페": "Santa Fe", "팰리세이드": "Palisade",
+    "더 뉴 팰리세이드": "Palisade", "캐스퍼": "Casper",
+    "아이오닉5": "Ioniq 5", "아이오닉6": "Ioniq 6",
+    "넥쏘": "Nexo", "코나": "Kona", "베뉴": "Venue",
+    "스타렉스": "Staria", "그랜드 스타렉스": "Grand Starex",
+    "더 뉴 그랜드 스타렉스": "Grand Starex",
+    # Kia
+    "K3": "K3", "K5": "K5", "K7": "K7", "K8": "K8", "K9": "K9",
+    "스팅어": "Stinger", "카니발": "Carnival", "스포티지": "Sportage",
+    "쏘렌토": "Sorento", "더 뉴 쏘렌토": "Sorento",
+    "모하비": "Mohave", "셀토스": "Seltos", "니로": "Niro",
+    "EV6": "EV6", "EV9": "EV9", "레이": "Ray", "모닝": "Morning",
+    # Genesis
+    "G70": "G70", "G80": "G80", "G90": "G90",
+    "GV70": "GV70", "GV80": "GV80",
+    # BMW
+    "3시리즈": "3 Series", "5시리즈": "5 Series", "7시리즈": "7 Series",
+    "X3": "X3", "X5": "X5", "X6": "X6",
+    # Mercedes
+    "C클래스": "C-Class", "E클래스": "E-Class", "S클래스": "S-Class",
+    "GLC": "GLC", "GLE": "GLE",
+}
+
 BRAND_MAP = {
     "벤츠":     "Mercedes-Benz",
     "BMW":      "BMW",
@@ -94,28 +120,24 @@ def format_price(eur: int) -> str:
 
 def is_still_active(car_id: str) -> bool:
     """
-    Returns True (keep car) unless Encar clearly confirms it is sold.
-    Defaults to True on ANY error — never removes a car due to a network issue.
+    Uses the same search API that works from GitHub Actions.
+    Searches for the specific car ID — if Count is 0 it is sold/removed.
+    Defaults to True on ANY error (fail-safe — never removes due to network issue).
     """
-    urls_to_try = [
-        f"https://fem.encar.com/cars/detail/{car_id}",
-        f"https://www.encar.com/dc/sale/dcSaleCarInfoTb.do?carid={car_id}",
-    ]
-    for url in urls_to_try:
-        try:
-            res = requests.get(url, headers=HEADERS, timeout=12, allow_redirects=True)
-            if res.status_code == 404:
-                return False
-            if res.status_code == 200:
-                text = res.text
-                # Definitive sold markers in Korean / Encar HTML
-                if any(marker in text for marker in ["판매완료", "SaleCompleted", "이미 판매", "판매된 차량"]):
-                    return False
-                return True
-        except Exception:
-            continue  # try next URL
-    # Could not reach Encar at all — keep the car (fail-safe)
-    return True
+    try:
+        params = {
+            "count": "true",
+            "q":     f"(And.Hidden.N._.Id.{car_id}.)",
+            "sr":    "|ModifiedDate|0|1",
+        }
+        res = requests.get(SEARCH_ENDPOINTS[0], params=params, headers=HEADERS, timeout=12)
+        if res.status_code == 200:
+            data  = res.json()
+            count = data.get("Count", 1)  # default 1 = keep car if field missing
+            return count > 0
+    except Exception:
+        pass
+    return True  # fail-safe
 
 
 def fetch_new_listings() -> list:
@@ -242,9 +264,12 @@ def main() -> None:
         turnkey   = calc_turnkey(krw, rate)
         raw_brand = item.get("Manufacturer", "")
         brand     = BRAND_MAP.get(raw_brand, raw_brand)
-        model     = (item.get("Model", "") or "").strip()
+        raw_model = (item.get("ModelGroup", "") or item.get("Model", "") or "").strip()
+        model     = MODEL_MAP.get(raw_model, raw_model)
         badge     = (item.get("Badge",  "") or "").strip()
-        year      = item.get("Year", "")
+        # Year comes as YYYYMM.0 — extract just the 4-digit year
+        raw_year  = str(item.get("Year", "") or "")
+        year      = raw_year[:4] if len(raw_year) >= 4 else raw_year
         model_str = f"{model} {badge} ({year})".strip()
 
         added.append({
