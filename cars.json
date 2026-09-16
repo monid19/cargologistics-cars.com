@@ -2,21 +2,13 @@
   {
     "id": 1,
     "brand": "Kia",
-    "model": "Carnival 4th Gen Gasoline 9-Seat (2021)",
-    "price": "31 890 €",
-    "image": "https://ci.encar.com/carpicture08/pic3878/38781023_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/38792807"
-  },
-  {
-    "id": 2,
-    "brand": "Kia",
     "model": "EV6 Long Range (2022)",
     "price": "25 250 €",
     "image": "https://ci.encar.com/carpicture03/pic4223/42237736_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42240916"
   },
   {
-    "id": 3,
+    "id": 2,
     "brand": "Hyundai",
     "model": "Tucson NX4 Diesel 2.0 4WD (2022)",
     "price": "18 370 €",
@@ -24,7 +16,7 @@
     "encarUrl": "https://fem.encar.com/cars/detail/41935305"
   },
   {
-    "id": 4,
+    "id": 3,
     "brand": "Hyundai",
     "model": "Tucson NX4 Diesel 2.0 4WD (2022)",
     "price": "18 600 €",
@@ -32,7 +24,7 @@
     "encarUrl": "https://fem.encar.com/cars/detail/41933930"
   },
   {
-    "id": 5,
+    "id": 4,
     "brand": "Hyundai",
     "model": "Palisade Diesel 2.2 2WD (2024)",
     "price": "33 310 €",
@@ -40,7 +32,7 @@
     "encarUrl": "https://fem.encar.com/cars/detail/42271590"
   },
   {
-    "id": 6,
+    "id": 5,
     "brand": "Kia",
     "model": "Sorento HEV 1.6 2WD (2025)",
     "price": "33 690 €",
@@ -48,7 +40,7 @@
     "encarUrl": "https://fem.encar.com/cars/detail/42197567"
   },
   {
-    "id": 7,
+    "id": 6,
     "brand": "Kia",
     "model": "Seltos Gasoline 1.6 Turbo 2WD (2019)",
     "price": "16 130 €",
@@ -56,7 +48,7 @@
     "encarUrl": "https://fem.encar.com/cars/detail/42177430"
   },
   {
-    "id": 8,
+    "id": 7,
     "brand": "Hyundai",
     "model": "Palisade Diesel 2.2 2WD (2022)",
     "price": "20 610 €",
@@ -64,35 +56,27 @@
     "encarUrl": "https://fem.encar.com/cars/detail/42165415"
   },
   {
-    "id": 9,
+    "id": 8,
     "brand": "Genesis",
-    "model": "GV80 3.5T 가솔린 AWD (2023)",
+    "model": "GV80 3.5T Gasoline AWD (2023)",
     "price": "41 530 €",
     "image": "https://ci.encar.com/carpicture05/pic4215/42153245_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42162774"
   },
   {
-    "id": 10,
+    "id": 9,
     "brand": "Kia",
-    "model": "Mohave 디젤 3.0 4WD (2016)",
+    "model": "Mohave Diesel 3.0 4WD (2016)",
     "price": "15 390 €",
     "image": "https://ci.encar.com/carpicture08/pic4178/41783499_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/41795410"
   },
   {
-    "id": 11,
+    "id": 10,
     "brand": "Kia",
     "model": "K9 3.3 GDI AWD (2021)",
     "price": "23 900 €",
     "image": "https://ci.encar.com/carpicture01/pic4201/42015536_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42016029"
-  },
-  {
-    "id": 12,
-    "brand": "Kia",
-    "model": "Carnival 가솔린 9인승 노블레스 (2022)",
-    "price": "33 680 €",
-    "image": "https://ci.encar.com/carpicture01/pic4201/42015592_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42017130"
   }
 ]
