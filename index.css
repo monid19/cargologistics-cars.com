@@ -144,20 +144,20 @@
   }
 
   .hero-right .hero-eyebrow {
-    background: rgba(220,38,38,0.15);
-    border-color: rgba(220,38,38,0.4);
-    color: #f87171;
+    background: rgba(230,33,6,0.15);
+    border-color: rgba(230,33,6,0.4);
+    color: #e62106;
   }
-  .hero-right .hero-eyebrow::before { background: #f87171; }
-  .hero-right h1 em { color: #c0392b; }
+  .hero-right .hero-eyebrow::before { background: #e62106; }
+  .hero-right h1 em { color: #e62106; }
   .hero-right .hero-desc { text-align: right; }
-  .hero-right .hero-promise { color: #f87171; }
+  .hero-right .hero-promise { color: #e62106; }
   .hero-right .hero-actions { justify-content: flex-end; }
-  .hero-right .btn-lime { background: #dc2626; color: #ffffff; }
-  .hero-right .btn-lime:hover { background: #b91c1c; color: #ffffff; }
-  .hero-right .btn-ghost-white { border-color: rgba(248,113,113,0.5); }
-  .hero-right .btn-ghost-white:hover { border-color: #f87171; color: #f87171; }
-  .hero-right .stat-num { color: #f87171; }
+  .hero-right .btn-lime { background: #e62106; color: #ffffff; }
+  .hero-right .btn-lime:hover { background: #c41a05; color: #ffffff; }
+  .hero-right .btn-ghost-white { border-color: rgba(255,255,255,0.25); }
+  .hero-right .btn-ghost-white:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
+  .hero-right .stat-num { color: #e62106; }
   .hero-right .hero-stats { justify-content: flex-end; }
 
   .hero-divider {
@@ -1088,7 +1088,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: #dc2626;
+    background: #e62106;
     color: var(--white);
     text-decoration: none;
     font-size: 0.8rem;
@@ -1098,10 +1098,10 @@
     border-radius: 6px;
     transition: background 0.2s, transform 0.15s;
   }
-  .china-portal-btn:hover { background: #b91c1c; transform: translateY(-1px); }
+  .china-portal-btn:hover { background: #c41a05; transform: translateY(-1px); }
 
-  .china-cars-section .section-tag { color: #dc2626; }
-  .china-cars-section .section-tag::before { background: #dc2626; }
+  .china-cars-section .section-tag { color: #e62106; }
+  .china-cars-section .section-tag::before { background: #e62106; }
 
   .cars-lead {
     font-size: 0.92rem;
