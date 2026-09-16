@@ -79,7 +79,7 @@
     position: relative;
     z-index: 2;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     flex: 1;
   }
 
@@ -149,7 +149,7 @@
     color: #f87171;
   }
   .hero-right .hero-eyebrow::before { background: #f87171; }
-  .hero-right h1 em { color: #ff3333; }
+  .hero-right h1 em { color: #c0392b; }
   .hero-right .hero-desc { text-align: right; }
   .hero-right .hero-promise { color: #f87171; }
   .hero-right .hero-actions { justify-content: flex-end; }
@@ -161,12 +161,7 @@
   .hero-right .hero-stats { justify-content: flex-end; }
 
   .hero-divider {
-    position: relative;
-    z-index: 2;
-    width: 1px;
-    background: rgba(255,255,255,0.12);
-    margin: 5rem 0;
-    flex-shrink: 0;
+    display: none;
   }
   
   .hero-eyebrow {
