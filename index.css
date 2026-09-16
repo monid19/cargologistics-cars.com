@@ -125,12 +125,13 @@
 
   .hero-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 1.5rem;
-    align-items: flex-start;
+    align-items: center;
   }
-  .hero-right .hero-links { align-items: flex-end; }
+  .hero-right .hero-links { justify-content: flex-end; flex-wrap: nowrap; }
 
   .hero-right {
     text-align: right;
@@ -176,7 +177,8 @@
     text-transform: uppercase;
     padding: 0.45rem 1rem;
     border-radius: 3px;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
     width: fit-content;
   }
   
