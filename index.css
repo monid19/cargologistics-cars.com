@@ -70,7 +70,7 @@
     min-height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     padding-top: 72px;
     overflow: hidden;
   }
@@ -92,11 +92,46 @@
     background: linear-gradient(105deg, rgba(22,64,31,0.92) 0%, rgba(22,64,31,0.6) 55%, rgba(22,64,31,0.15) 100%);
   }
   
-  .hero-left {
+  .hero-left,
+  .hero-right {
     position: relative;
     z-index: 2;
-    padding: 6rem 5rem;
-    max-width: 680px;
+    padding: 6rem 4rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .hero-right {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .hero-right .hero-eyebrow {
+    background: rgba(220,38,38,0.15);
+    border-color: rgba(220,38,38,0.4);
+    color: #f87171;
+  }
+  .hero-right .hero-eyebrow::before { background: #f87171; }
+  .hero-right h1 em { color: #ff3333; }
+  .hero-right .hero-desc { text-align: right; }
+  .hero-right .hero-promise { color: #f87171; }
+  .hero-right .hero-actions { justify-content: flex-end; }
+  .hero-right .btn-lime { background: #dc2626; color: #ffffff; }
+  .hero-right .btn-lime:hover { background: #b91c1c; color: #ffffff; }
+  .hero-right .btn-ghost-white { border-color: rgba(248,113,113,0.5); }
+  .hero-right .btn-ghost-white:hover { border-color: #f87171; color: #f87171; }
+  .hero-right .stat-num { color: #f87171; }
+  .hero-right .hero-stats { justify-content: flex-end; }
+
+  .hero-divider {
+    position: relative;
+    z-index: 2;
+    width: 1px;
+    background: rgba(255,255,255,0.12);
+    margin: 5rem 0;
+    flex-shrink: 0;
   }
   
   .hero-eyebrow {
@@ -1010,6 +1045,32 @@
   
   /* CAR LISTINGS */
   .cars-section { background: var(--white); }
+  .china-cars-section { background: var(--off-white); }
+
+  .china-portals {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .china-portal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #dc2626;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .china-portal-btn:hover { background: #b91c1c; transform: translateY(-1px); }
+
+  .china-cars-section .section-tag { color: #dc2626; }
+  .china-cars-section .section-tag::before { background: #dc2626; }
 
   .cars-lead {
     font-size: 0.92rem;
@@ -1297,9 +1358,11 @@
     .nav-links a { display: block; padding: 0.9rem 0; width: 100%; border-bottom: 1px solid #eef2ec; }
     .nav-links a.nav-cta { display: inline-block; width: auto; border-bottom: none; margin-top: 0.8rem; }
     section, .contact-section { padding: 5rem 1.5rem; }
-    .hero { grid-template-columns: 1fr; background: var(--green-brand); }
-    .hero-right { display: none; }
-    .hero-left { padding: 5rem 1.5rem 3rem; }
+    .hero { flex-direction: column; }
+    .hero-right { display: flex; }
+    .hero-divider { width: auto; height: 1px; margin: 0 1.5rem; }
+    .hero-left,
+    .hero-right { padding: 3rem 1.5rem; }
     .how-layout { grid-template-columns: 1fr; gap: 2rem; }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .pricing-layout { grid-template-columns: 1fr; }
