@@ -70,10 +70,32 @@
     min-height: 100vh;
     position: relative;
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
     padding-top: 72px;
     overflow: hidden;
   }
+
+  .hero-columns {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+  }
+
+  .hero-shared {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-shared .hero-desc { max-width: 600px; text-align: center; }
+  .hero-shared .hero-promise { text-align: center; }
+  .hero-shared .hero-actions { justify-content: center; }
+  .hero-shared .hero-stats { justify-content: center; }
   
   .hero-bg {
     position: absolute;
@@ -94,14 +116,21 @@
   
   .hero-left,
   .hero-right {
-    position: relative;
-    z-index: 2;
-    padding: 6rem 4rem;
+    padding: 4rem 4rem 2rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
+
+  .hero-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    align-items: flex-start;
+  }
+  .hero-right .hero-links { align-items: flex-end; }
 
   .hero-right {
     text-align: right;
@@ -1358,11 +1387,13 @@
     .nav-links a { display: block; padding: 0.9rem 0; width: 100%; border-bottom: 1px solid #eef2ec; }
     .nav-links a.nav-cta { display: inline-block; width: auto; border-bottom: none; margin-top: 0.8rem; }
     section, .contact-section { padding: 5rem 1.5rem; }
-    .hero { flex-direction: column; }
-    .hero-right { display: flex; }
+    .hero-columns { flex-direction: column; }
     .hero-divider { width: auto; height: 1px; margin: 0 1.5rem; }
     .hero-left,
-    .hero-right { padding: 3rem 1.5rem; }
+    .hero-right { padding: 2.5rem 1.5rem 1rem; }
+    .hero-right { display: flex; }
+    .hero-right .hero-links { align-items: flex-start; }
+    .hero-shared { padding: 1.5rem 1.5rem 3rem; }
     .how-layout { grid-template-columns: 1fr; gap: 2rem; }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .pricing-layout { grid-template-columns: 1fr; }
