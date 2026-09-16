@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "brand": "BYD",
+    "model": "Atto 3 (2024)",
+    "price": "Скоро",
+    "image": "images/china/byd-atto3.jpg",
+    "sourceUrl": "https://en.guazi.com"
+  },
+  {
+    "id": 2,
+    "brand": "BYD",
+    "model": "Han EV (2024)",
+    "price": "Скоро",
+    "image": "images/china/byd-han.jpg",
+    "sourceUrl": "https://en.guazi.com"
+  },
+  {
+    "id": 3,
+    "brand": "BYD",
+    "model": "Tang (2023)",
+    "price": "Скоро",
+    "image": "images/china/byd-tang.jpg",
+    "sourceUrl": "https://en.guazi.com"
+  },
+  {
+    "id": 4,
+    "brand": "Chery",
+    "model": "Tiggo 8 Pro (2023)",
+    "price": "Скоро",
+    "image": "images/china/chery-tiggo8.jpg",
+    "sourceUrl": "https://www.autocango.com"
+  },
+  {
+    "id": 5,
+    "brand": "MG",
+    "model": "MG4 Electric (2024)",
+    "price": "Скоро",
+    "image": "images/china/mg4.jpg",
+    "sourceUrl": "https://www.autocango.com"
+  },
+  {
+    "id": 6,
+    "brand": "Geely",
+    "model": "Coolray (2023)",
+    "price": "Скоро",
+    "image": "images/china/geely-coolray.jpg",
+    "sourceUrl": "https://en.guazi.com"
+  },
+  {
+    "id": 7,
+    "brand": "Xpeng",
+    "model": "G6 (2024)",
+    "price": "Скоро",
+    "image": "images/china/xpeng-g6.jpg",
+    "sourceUrl": "https://www.autocango.com"
+  },
+  {
+    "id": 8,
+    "brand": "NIO",
+    "model": "ET5 (2023)",
+    "price": "Скоро",
+    "image": "images/china/nio-et5.jpg",
+    "sourceUrl": "https://www.autocango.com"
+  }
+]

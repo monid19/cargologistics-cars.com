@@ -176,60 +176,26 @@
 
     <!-- CAR LISTINGS -->
     <section class="cars-section" id="cars">
-      <div class="section-tag fade-up">Каталог</div>
-      <h2 class="fade-up">Обяви на автомобили от Encar.com</h2>
-      <p class="cars-lead fade-up">Тук може да намерите обяви на автомобили от Encar.com. Важно! Това са примерни обяви, ако се интересувате от конкретен модел и година посетете сайта на Encar.com. За Ваше улеснение цената е пресметната ориентировачно с разходите по доставка до България.</p>
-
-      <div class="cars-scroll-wrap">
-        <div class="cars-grid" id="cars-grid">
-          <!-- Populated by JS from cars.json -->
-        </div>
+      <div class="section-tag fade-up">Каталог - Корея</div>
+      <div class="cars-grid" id="cars-grid">
+        <!-- Populated by JS from cars.json -->
       </div>
-
-      <div class="cars-cta fade-up">
-        <p>Не намирате точния модел?</p>
-        <a href="#contact" class="btn-lime">Направи запитване →</a>
+      <div class="listing-cta fade-up">
+        <span>Не намираш каквото търсиш? Виж още обяви в</span>
+        <a href="https://www.encar.com" target="_blank" rel="noopener" class="listing-cta-btn">Encar.com →</a>
       </div>
     </section>
 
     <!-- CHINA CAR LISTINGS -->
     <section class="cars-section china-cars-section" id="china-cars">
       <div class="section-tag fade-up">Каталог - Китай</div>
-      <h2 class="fade-up">Обяви на автомобили от Китай</h2>
-      <p class="cars-lead fade-up">Внасяме автомобили директно от Китай чрез платформите Guazi.com и Autocango.com. Важно! Това са примерни обяви - ако се интересувате от конкретен модел и година, посетете съответния сайт. Цената е пресметната ориентировъчно с разходите по доставка до България.</p>
-
-      <div class="china-portals fade-up">
-        <a href="https://en.guazi.com" target="_blank" rel="noopener" class="china-portal-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.5"/></svg>
-          Guazi.com
-        </a>
-        <a href="https://www.autocango.com" target="_blank" rel="noopener" class="china-portal-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.5"/></svg>
-          Autocango.com
-        </a>
+      <div class="cars-grid" id="china-cars-grid">
+        <!-- Populated by JS from china-cars.json -->
       </div>
-
-      <div class="cars-scroll-wrap">
-        <div class="cars-grid" id="china-cars-grid">
-          <!-- Placeholder cards -->
-          <div class="car-card car-placeholder">
-            <div class="car-placeholder-icon">+</div>
-            <div class="car-placeholder-text">Скоро</div>
-          </div>
-          <div class="car-card car-placeholder">
-            <div class="car-placeholder-icon">+</div>
-            <div class="car-placeholder-text">Скоро</div>
-          </div>
-          <div class="car-card car-placeholder">
-            <div class="car-placeholder-icon">+</div>
-            <div class="car-placeholder-text">Скоро</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cars-cta fade-up">
-        <p>Интересувате се от автомобил от Китай?</p>
-        <a href="#contact" class="btn-lime">Направи запитване →</a>
+      <div class="listing-cta fade-up">
+        <span>Не намираш каквото търсиш? Виж още обяви в</span>
+        <a href="https://en.guazi.com" target="_blank" rel="noopener" class="listing-cta-btn">Guazi.com →</a>
+        <a href="https://www.autocango.com" target="_blank" rel="noopener" class="listing-cta-btn">Autocango.com →</a>
       </div>
     </section>
 
@@ -438,9 +404,9 @@ const PLACEHOLDER_COUNT = 1;
 
 function renderCars() {
   const grid = document.getElementById('cars-grid');
-  const filtered = allCars;
+  const visible = allCars.slice(0, 8);
 
-  const cards = filtered.map(car => `
+  grid.innerHTML = visible.map(car => `
     <div class="car-card fade-up visible">
       <div class="car-img" style="background-image: url('${car.image}');"></div>
       <div class="car-info">
@@ -450,18 +416,40 @@ function renderCars() {
       </div>
     </div>
   `).join('');
-
-  const placeholders = Array(PLACEHOLDER_COUNT).fill(`
-    <div class="car-card car-placeholder">
-      <div class="car-placeholder-icon">+</div>
-      <div class="car-placeholder-text">Скоро</div>
-    </div>
-  `).join('');
-
-  grid.innerHTML = cards + placeholders;
 }
 
 loadCars();
+
+// China car listings
+let allChinaCars = [];
+
+async function loadChinaCars() {
+  try {
+    const res = await fetch('china-cars.json');
+    allChinaCars = await res.json();
+    renderChinaCars();
+  } catch (err) {
+    document.getElementById('china-cars-grid').innerHTML = '<p style="color:rgba(255,255,255,0.4);font-size:0.9rem;">Грешка при зареждане на автомобилите.</p>';
+  }
+}
+
+function renderChinaCars() {
+  const grid = document.getElementById('china-cars-grid');
+  const visible = allChinaCars.slice(0, 8);
+
+  grid.innerHTML = visible.map(car => `
+    <div class="car-card fade-up visible">
+      <div class="car-img${car.image ? '' : ' car-img-placeholder'}" ${car.image ? `style="background-image: url('${car.image}');"` : ''}></div>
+      <div class="car-info">
+        <h3 class="car-name">${car.brand} ${car.model}</h3>
+        <div class="car-price">${car.price}</div>
+        <a href="${car.sourceUrl}" target="_blank" class="car-link">Виж обявата →</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+loadChinaCars();
 
 // Contact form AJAX
 const contactForm = document.getElementById('contact-form');

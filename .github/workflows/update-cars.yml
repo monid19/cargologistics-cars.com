@@ -23,14 +23,17 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run update script
+      - name: Run Korea update script
         run: python scripts/update_cars.py
 
-      - name: Commit and push if cars.json changed
+      - name: Run China update script
+        run: python scripts/update_china_cars.py
+
+      - name: Commit and push if listings changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add cars.json
+          git add cars.json china-cars.json
           git diff --staged --quiet && echo "No changes." || (
             git commit -m "Auto-update car listings [skip ci]"
             git push
