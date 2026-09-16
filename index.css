@@ -123,15 +123,20 @@
     justify-content: flex-start;
   }
 
+  .hero-sub {
+    margin-top: auto;
+  }
+
   .hero-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     align-items: center;
   }
   .hero-right .hero-links { justify-content: flex-end; flex-wrap: nowrap; }
+  .hero-right .hero-sub { align-items: flex-end; display: flex; flex-direction: column; }
 
   .hero-right {
     text-align: right;
