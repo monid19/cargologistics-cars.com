@@ -6,6 +6,10 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-l", "3000", "."],
       "port": 3000
+    },
+    {
+      "name": "cargo-logistics-bg-preview",
+      "url": "http://localhost:5502"
     }
   ]
 }
