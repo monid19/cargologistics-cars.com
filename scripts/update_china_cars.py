@@ -131,12 +131,29 @@ def fetch_product_page(browser, product_url: str, brand_name: str) -> dict | Non
         if fob_usd == 0:
             return None
 
-        image = page.eval_on_selector_all(
+        image_url = page.eval_on_selector_all(
             'img',
             "els => els.map(i => i.src).find(s => s.includes('guazistatic-global.com')) || ''"
         ) or ""
 
-        return {"model": model, "fob_usd": fob_usd, "image": image}
+        # Download image locally so it doesn't rely on hotlink access
+        local_image = ""
+        if image_url:
+            slug = re.sub(r'[^a-z0-9]+', '-', brand_name.lower())
+            fname = f"{slug}-{abs(hash(product_url)) % 100000}.jpg"
+            img_dir = os.path.join(os.path.dirname(__file__), "..", "images", "china")
+            os.makedirs(img_dir, exist_ok=True)
+            dest = os.path.join(img_dir, fname)
+            try:
+                img_data = requests.get(image_url, timeout=15).content
+                if len(img_data) > 5000:
+                    with open(dest, "wb") as f:
+                        f.write(img_data)
+                    local_image = f"images/china/{fname}"
+            except Exception:
+                pass
+
+        return {"model": model, "fob_usd": fob_usd, "image": local_image or image_url}
     finally:
         ctx.close()
 
