@@ -21,7 +21,9 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install requests
+        run: |
+          pip install requests playwright
+          playwright install chromium --with-deps
 
       - name: Run Korea update script
         run: python scripts/update_cars.py

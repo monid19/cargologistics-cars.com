@@ -1,17 +1,23 @@
 """
-Auto-updates china-cars.json with new listings from Guazi.com (Chinese used car marketplace).
-- Removes sold/unavailable listings automatically
-- Keeps the site capped at MAX_CARS listings
-- Runs daily via GitHub Actions
-Note: Guazi.com may rate-limit non-CN IPs. The script fails gracefully —
-      existing listings are preserved on any network error.
+Auto-updates china-cars.json with listings from en.guazi.com.
+Uses Playwright headless browser (required — the site is a JS SPA).
+Runs daily via GitHub Actions.
 """
+
+from __future__ import annotations
 
 import json
 import os
 import re
 import sys
 import time
+
+try:
+    from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
+except ImportError:
+    print("Playwright not installed. Run: pip install playwright && playwright install chromium")
+    sys.exit(0)  # Exit cleanly so workflow doesn't fail on missing dep
+
 import requests
 
 # ---------------------------------------------------------------------------
@@ -19,49 +25,25 @@ import requests
 # ---------------------------------------------------------------------------
 MAX_CARS = 8
 
-# Target brands and their English names
-TARGET_BRANDS = {
-    "比亚迪": "BYD",
-    "蔚来":   "NIO",
-    "小鹏":   "Xpeng",
-    "理想":   "Li Auto",
-    "埃安":   "AION",
-    "奇瑞":   "Chery",
-    "MG":     "MG",
-    "名爵":   "MG",
-    "吉利":   "Geely",
-    "长安":   "Changan",
-    "哪吒":   "Neta",
-    "问界":   "AITO",
-    "极氪":   "Zeekr",
-    "岚图":   "Voyah",
-}
+BRANDS = [
+    ("BYD",    "byd"),
+    ("NIO",    "nio"),
+    ("Xpeng",  "xpeng"),
+    ("Chery",  "chery"),
+    ("MG",     "mg"),
+    ("Geely",  "geely-auto"),
+    ("Li Auto","lixiang"),
+    ("AION",   "aion"),
+]
 
-SEARCH_CONFIG = {
-    "min_price_wan": 5,    # 万元 ~6 000 €
-    "max_price_wan": 60,   # 万元 ~73 000 €
-    "min_year":      2020,
-    "max_mileage":   100000,
-    "fetch_count":   60,
-}
+MIN_YEAR    = 2020
+MAX_MILEAGE = 100_000   # km
+MIN_FOB_USD = 5_000
+MAX_FOB_USD = 80_000
 
-FRANKFURTER_API = "https://api.frankfurter.dev/v1/latest?base=EUR&symbols=CNY"
+FRANKFURTER_API = "https://api.frankfurter.dev/v1/latest?base=EUR&symbols=USD"
 CHINA_CARS_JSON = os.path.join(os.path.dirname(__file__), "..", "china-cars.json")
-
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    ),
-    "Accept":          "application/json, text/plain, */*",
-    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Referer":         "https://www.guazi.com/",
-}
-
-# Guazi search endpoint — returns JSON paginated results
-GUAZI_SEARCH = "https://www.guazi.com/pc/buy"
-GUAZI_CHECK  = "https://www.guazi.com/pc/detail"
+BASE_URL        = "https://en.guazi.com"
 
 # ---------------------------------------------------------------------------
 
@@ -69,26 +51,17 @@ GUAZI_CHECK  = "https://www.guazi.com/pc/detail"
 def get_exchange_rate() -> float:
     res = requests.get(FRANKFURTER_API, timeout=10)
     res.raise_for_status()
-    return res.json()["rates"]["CNY"]
+    return res.json()["rates"]["USD"]
 
 
-def calc_import_price(cny: float, cny_per_eur: float) -> int:
-    """
-    Rough landed cost estimate for importing a Chinese car to Bulgaria:
-      - Car price in EUR
-      - ~1 000 € shipping (China → BG)
-      - ~200 € inspection / paperwork
-      - Bulgarian import duty 6.5% of car value
-      - VAT 20% on (car + duty + shipping)
-      - Registration 150 €
-    """
-    car_eur   = cny / cny_per_eur
-    shipping  = 1000
-    papers    = 200
-    duty      = car_eur * 0.065
-    vat_base  = car_eur + duty + shipping + papers
-    vat       = vat_base * 0.20
-    total     = vat_base + vat + 150
+def calc_import_price(fob_usd: float, usd_per_eur: float) -> int:
+    fob_eur  = fob_usd / usd_per_eur
+    shipping = 1200
+    papers   = 250
+    duty     = (fob_eur + shipping) * 0.065
+    vat_base = fob_eur + shipping + papers + duty
+    vat      = vat_base * 0.20
+    total    = vat_base + vat + 150
     return round(total / 10) * 10
 
 
@@ -108,135 +81,162 @@ def save(cars: list) -> None:
         json.dump(cars, f, ensure_ascii=False, indent=2)
 
 
-def fetch_listings() -> list:
-    """
-    Queries Guazi.com for used Chinese EVs/new-energy vehicles.
-    Returns parsed listing dicts, or empty list on failure.
-    """
-    cfg = SEARCH_CONFIG
-    results = []
+CONTEXT_KWARGS = dict(
+    user_agent=(
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    locale="en-US",
+)
 
-    for brand_cn, brand_en in TARGET_BRANDS.items():
-        if len(results) >= cfg["fetch_count"]:
-            break
+
+def fetch_product_page(browser, product_url: str, brand_name: str) -> dict | None:
+    """Open a fresh browser context for each product page to avoid rate-limiting."""
+    ctx = browser.new_context(**CONTEXT_KWARGS)
+    try:
+        page = ctx.new_page()
         try:
-            params = {
-                "kw":       brand_cn,
-                "pricemin": cfg["min_price_wan"],
-                "pricemax": cfg["max_price_wan"],
-                "minyear":  cfg["min_year"],
-                "page":     1,
-            }
-            res = requests.get(GUAZI_SEARCH, params=params, headers=HEADERS, timeout=15)
-            if res.status_code != 200:
-                print(f"  [{brand_en}] HTTP {res.status_code} — skipping")
-                continue
+            page.goto(product_url, timeout=30_000, wait_until="domcontentloaded")
+            page.wait_for_function("document.title.length > 10", timeout=12_000)
+            time.sleep(1.5)
+        except PWTimeout:
+            return None
 
-            data = res.json()
-            items = data.get("data", {}).get("carList", [])
-            if not items:
-                # Try alternate key structures
-                items = data.get("result", data.get("list", []))
+        title = page.title()
+        # Security verification page — blocked
+        if "security" in title.lower() or "verification" in title.lower():
+            return None
 
-            if not items:
-                print(f"  [{brand_en}] No listings found or unexpected response format")
-                continue
+        title = re.sub(r'\s+for\s+Sale.*', '', title, flags=re.IGNORECASE).strip()
+        title = re.sub(r'^Used\s+', '', title, flags=re.IGNORECASE).strip()
+        model = re.sub(rf'^{re.escape(brand_name)}\s+', '', title, flags=re.IGNORECASE).strip()
 
-            for item in items:
-                mileage = item.get("mileage_num", item.get("kilometer", 999999))
-                year    = item.get("year_num",    item.get("year", 0))
-                price_w = item.get("display_price", item.get("price", 0))
-                try:
-                    price_w = float(str(price_w).replace("万", "").strip())
-                except (ValueError, AttributeError):
-                    price_w = 0
+        year_match = re.search(r'\b(20\d{2})\b', model)
+        year = int(year_match.group(1)) if year_match else 0
+        if year < MIN_YEAR:
+            return None
 
-                if (price_w < cfg["min_price_wan"]
-                        or price_w > cfg["max_price_wan"]
-                        or mileage > cfg["max_mileage"]
-                        or year < cfg["min_year"]):
-                    continue
+        body_text = page.inner_text('body')
+        price_matches = re.findall(r'\$([0-9,]+)', body_text)
+        fob_usd = 0
+        for pm in price_matches:
+            try:
+                val = int(pm.replace(',', ''))
+                if MIN_FOB_USD <= val <= MAX_FOB_USD:
+                    fob_usd = val
+                    break
+            except ValueError:
+                pass
+        if fob_usd == 0:
+            return None
 
-                item["_brand_en"] = brand_en
-                results.append(item)
+        image = page.eval_on_selector_all(
+            'img',
+            "els => els.map(i => i.src).find(s => s.includes('guazistatic-global.com')) || ''"
+        ) or ""
 
-            time.sleep(1.0)
+        return {"model": model, "fob_usd": fob_usd, "image": image}
+    finally:
+        ctx.close()
 
-        except Exception as exc:
-            print(f"  [{brand_en}] Error: {exc}")
+
+def scrape_brand_listings(browser, brand_name: str, brand_slug: str,
+                          known_urls: set, slots: int) -> list:
+    """Navigate to a brand listing page and extract car entries."""
+    url = f"{BASE_URL}/used-cars/{brand_slug}/"
+    print(f"  Opening {url}...")
+
+    ctx = browser.new_context(**CONTEXT_KWARGS)
+    try:
+        page = ctx.new_page()
+        try:
+            page.goto(url, timeout=30_000, wait_until="domcontentloaded")
+            page.wait_for_selector('a[href*="/products/"]', timeout=20_000)
+        except PWTimeout:
+            print(f"  Timeout / no product links for {url} — skipping")
+            return []
+
+        for _ in range(3):
+            page.evaluate("window.scrollBy(0, 800)")
+            time.sleep(0.5)
+
+        links = page.eval_on_selector_all(
+            'a[href*="/products/"]',
+            'els => [...new Set(els.map(a => a.href))]'
+        )
+    finally:
+        ctx.close()
+
+    print(f"  Found {len(links)} product URLs")
+
+    added = []
+    for product_url in links:
+        if len(added) >= slots:
+            break
+        if product_url in known_urls:
             continue
 
-    return results
+        mileage_match = re.search(r'-(\d+)km-', product_url)
+        if mileage_match and int(mileage_match.group(1)) > MAX_MILEAGE:
+            continue
+
+        print(f"    Fetching {product_url.split('/')[-1][:60]}...")
+        data = fetch_product_page(browser, product_url, brand_name)
+        if data is None:
+            time.sleep(2)
+            continue
+
+        eur_price = calc_import_price(data["fob_usd"], USD_PER_EUR)
+        entry = {
+            "id":        -1,
+            "brand":     brand_name,
+            "model":     data["model"],
+            "price":     format_price(eur_price),
+            "image":     data["image"],
+            "sourceUrl": product_url,
+        }
+        added.append(entry)
+        known_urls.add(product_url)
+        print(f"    [NEW] {brand_name} {data['model']} — {format_price(eur_price)}")
+        time.sleep(2)
+
+    return added
 
 
-def is_still_listed(source_url: str) -> bool:
-    """Check if a listing page still returns 200. Fail-safe: True on any error."""
-    if not source_url or source_url in ("https://en.guazi.com", "https://www.autocango.com"):
-        return True  # placeholder entries — keep
+USD_PER_EUR = 1.08  # fallback, overwritten in main()
+
+
+def is_still_listed(url: str) -> bool:
+    if not url or url in ("https://en.guazi.com", "https://www.autocango.com"):
+        return True
     try:
-        res = requests.head(source_url, headers=HEADERS, timeout=10, allow_redirects=True)
+        res = requests.head(url, timeout=10, allow_redirects=True)
         return res.status_code < 400
     except Exception:
         return True
 
 
-def extract_listing(item: dict, new_id: int, cny_per_eur: float) -> dict:
-    brand = item.get("_brand_en", "")
-    model = (item.get("car_name", "") or item.get("name", "")).strip()
-    # Strip brand name from model if duplicated
-    if model.startswith(brand):
-        model = model[len(brand):].strip()
-
-    year      = item.get("year_num", item.get("year", ""))
-    model_str = f"{model} ({year})" if year else model
-
-    price_w   = item.get("display_price", item.get("price", 0))
-    try:
-        price_w = float(str(price_w).replace("万", "").strip())
-    except (ValueError, AttributeError):
-        price_w = 0
-    cny       = price_w * 10_000
-    price_eur = calc_import_price(cny, cny_per_eur) if cny > 0 else 0
-    price_str = format_price(price_eur) if price_eur > 0 else "Скоро"
-
-    # Image: prefer first photo
-    image = ""
-    photos = item.get("pic_url", item.get("photo", item.get("images", [])))
-    if isinstance(photos, list) and photos:
-        image = photos[0]
-    elif isinstance(photos, str) and photos:
-        image = photos
-
-    # Listing URL
-    car_id     = item.get("carid", item.get("id", ""))
-    source_url = f"https://www.guazi.com/pc/detail/{car_id}" if car_id else "https://en.guazi.com"
-
-    return {
-        "id":        new_id,
-        "brand":     brand,
-        "model":     model_str,
-        "price":     price_str,
-        "image":     image,
-        "sourceUrl": source_url,
-    }
-
-
 def main() -> None:
-    print("--- Cargo Logistics China car listing updater ---\n")
+    global USD_PER_EUR
 
-    print("Fetching EUR/CNY exchange rate...")
+    print("--- Cargo Logistics China car listing updater (en.guazi.com) ---\n")
+
+    print("Fetching USD/EUR rate...")
     try:
-        rate = get_exchange_rate()
-        print(f"  1 EUR = {rate:.2f} CNY\n")
+        USD_PER_EUR = get_exchange_rate()
+        print(f"  1 EUR = {USD_PER_EUR:.4f} USD\n")
     except Exception as exc:
-        print(f"  Exchange rate fetch failed: {exc}")
-        print("  Using fallback rate 7.8 CNY/EUR")
-        rate = 7.8
+        print(f"  Rate fetch failed ({exc}) — using fallback 1.08\n")
 
     existing = load_existing()
-    print(f"Checking {len(existing)} existing listing(s) for availability...")
+    print(f"Checking {len(existing)} existing listing(s)...")
+    placeholders = []
     active = []
     for car in existing:
+        if car.get("placeholder"):
+            placeholders.append(car)
+            continue
         url = car.get("sourceUrl", "")
         if is_still_listed(url):
             active.append(car)
@@ -245,39 +245,45 @@ def main() -> None:
             print(f"  [GONE]  {car['brand']} {car['model']} — removed")
         time.sleep(0.3)
 
+    # Placeholders count as free slots
     slots = MAX_CARS - len(active)
-    print(f"\n{len(active)} active. {slots} slot(s) free (cap: {MAX_CARS}).\n")
+    print(f"\n{len(active)} real listing(s), {len(placeholders)} placeholder(s). "
+          f"{slots} slot(s) free (cap: {MAX_CARS}).\n")
 
     if slots <= 0:
-        print("At capacity — no new listings needed.")
-        if len(active) != len(existing):
-            save(active)
+        print("At capacity with real listings — no scraping needed.")
+        save(active)
         return
 
-    print("Fetching new listings from Guazi.com...")
-    raw = fetch_listings()
-    print(f"  {len(raw)} listing(s) matched filters\n")
-
     known_urls = {c.get("sourceUrl", "") for c in active}
-    added = []
+    all_new = []
 
-    for item in raw:
-        if len(added) >= slots:
-            break
-        car_id = item.get("carid", item.get("id", ""))
-        url    = f"https://www.guazi.com/pc/detail/{car_id}" if car_id else ""
-        if not url or url in known_urls:
-            continue
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=True)
 
-        entry = extract_listing(item, len(active) + len(added) + 1, rate)
-        added.append(entry)
-        known_urls.add(url)
-        print(f"  [NEW]   {entry['brand']} {entry['model']} — {entry['price']}")
+        for brand_name, brand_slug in BRANDS:
+            if len(all_new) >= slots:
+                break
+            remaining = slots - len(all_new)
+            print(f"\n[{brand_name}]")
+            new_entries = scrape_brand_listings(browser, brand_name, brand_slug,
+                                               known_urls, remaining)
+            all_new.extend(new_entries)
 
-    final = active + added
+        browser.close()
+
+    # Real listings first, then fill remaining slots with placeholders
+    real_count = len(active) + len(all_new)
+    remaining_placeholders = placeholders[: max(0, MAX_CARS - real_count)]
+
+    final = active + all_new + remaining_placeholders
+    for i, car in enumerate(final):
+        car["id"] = i + 1
+
     save(final)
-    print(f"\nDone. {len(added)} added, {len(existing) - len(active)} removed. "
-          f"Total: {len(final)}/{MAX_CARS}.")
+    removed = len(existing) - len(active) - len(placeholders)
+    print(f"\nDone. {len(all_new)} added, {removed} removed. "
+          f"Total: {len(final)}/{MAX_CARS} ({real_count} real, {len(remaining_placeholders)} placeholders).")
 
 
 if __name__ == "__main__":

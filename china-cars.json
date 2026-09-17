@@ -2,10 +2,10 @@
   {
     "id": 1,
     "brand": "BYD",
-    "model": "Atto 3 (2024)",
-    "price": "Скоро",
-    "image": "images/china/byd-atto3.jpg",
-    "sourceUrl": "https://en.guazi.com"
+    "model": "Yuan UP 2024 401KM Beyond Edition",
+    "price": "17 240 €",
+    "image": "https://global-image-pub.guazistatic-global.com/qnbdp8296xf862e8cd6eaf4a82821059e1aa0338d71789119838.png",
+    "sourceUrl": "https://en.guazi.com/products/byd-yuan-up-2024-00l-gray-19100km-at-2wd-5-seats-jluknuc9ql.html"
   },
   {
     "id": 2,
@@ -13,15 +13,17 @@
     "model": "Han EV (2024)",
     "price": "Скоро",
     "image": "images/china/byd-han.jpg",
-    "sourceUrl": "https://en.guazi.com"
+    "sourceUrl": "https://en.guazi.com",
+    "placeholder": true
   },
   {
     "id": 3,
     "brand": "BYD",
-    "model": "Tang (2023)",
+    "model": "Tang EV (2024)",
     "price": "Скоро",
     "image": "images/china/byd-tang.jpg",
-    "sourceUrl": "https://en.guazi.com"
+    "sourceUrl": "https://en.guazi.com",
+    "placeholder": true
   },
   {
     "id": 4,
@@ -29,7 +31,8 @@
     "model": "Tiggo 8 Pro (2023)",
     "price": "Скоро",
     "image": "images/china/chery-tiggo8.jpg",
-    "sourceUrl": "https://www.autocango.com"
+    "sourceUrl": "https://en.guazi.com",
+    "placeholder": true
   },
   {
     "id": 5,
@@ -37,7 +40,8 @@
     "model": "MG4 Electric (2024)",
     "price": "Скоро",
     "image": "images/china/mg4.jpg",
-    "sourceUrl": "https://www.autocango.com"
+    "sourceUrl": "https://en.guazi.com",
+    "placeholder": true
   },
   {
     "id": 6,
@@ -45,7 +49,8 @@
     "model": "Coolray (2023)",
     "price": "Скоро",
     "image": "images/china/geely-coolray.jpg",
-    "sourceUrl": "https://en.guazi.com"
+    "sourceUrl": "https://en.guazi.com",
+    "placeholder": true
   },
   {
     "id": 7,
@@ -53,14 +58,16 @@
     "model": "G6 (2024)",
     "price": "Скоро",
     "image": "images/china/xpeng-g6.jpg",
-    "sourceUrl": "https://www.autocango.com"
+    "sourceUrl": "https://en.guazi.com",
+    "placeholder": true
   },
   {
     "id": 8,
     "brand": "NIO",
-    "model": "ET5 (2023)",
+    "model": "ET5 (2024)",
     "price": "Скоро",
     "image": "images/china/nio-et5.jpg",
-    "sourceUrl": "https://www.autocango.com"
+    "sourceUrl": "https://en.guazi.com",
+    "placeholder": true
   }
 ]
