@@ -10,64 +10,57 @@
   {
     "id": 2,
     "brand": "BYD",
-    "model": "Han EV (2024)",
-    "price": "Скоро",
-    "image": "images/china/byd-han.jpg",
-    "sourceUrl": "https://en.guazi.com",
-    "placeholder": true
+    "model": "Seal 07 DM-i 2026 DM-i 1.5T 230km Flagship Edition",
+    "price": "27 060 €",
+    "image": "images/china/byd-27003.jpg",
+    "sourceUrl": "https://en.guazi.com/products/byd-seal-07-dm-i-2026-15l-white-12100km-at-2wd-5-seats-fghme9w43k.html"
   },
   {
     "id": 3,
     "brand": "BYD",
-    "model": "Tang EV (2024)",
-    "price": "Скоро",
-    "image": "images/china/byd-tang.jpg",
-    "sourceUrl": "https://en.guazi.com",
-    "placeholder": true
+    "model": "Yuan PLUS 2022 430 km Luxury Version",
+    "price": "14 940 €",
+    "image": "images/china/byd-14042.jpg",
+    "sourceUrl": "https://en.guazi.com/products/byd-yuan-plus-2022-00l-white-81300km-at-2wd-5-seats-ey2vzew2qk.html"
   },
   {
     "id": 4,
-    "brand": "Chery",
-    "model": "Tiggo 8 Pro (2023)",
-    "price": "Скоро",
-    "image": "images/china/chery-tiggo8.jpg",
-    "sourceUrl": "https://en.guazi.com",
-    "placeholder": true
+    "brand": "BYD",
+    "model": "Seal 07 DM-i 2025 DM-i 1.5T 125km Flagship Model",
+    "price": "23 500 €",
+    "image": "images/china/byd-40971.jpg",
+    "sourceUrl": "https://en.guazi.com/products/byd-seal-07-dm-i-2025-15l-black-39900km-at-2wd-5-seats-jwuqykpsea.html"
   },
   {
     "id": 5,
-    "brand": "MG",
-    "model": "MG4 Electric (2024)",
-    "price": "Скоро",
-    "image": "images/china/mg4.jpg",
-    "sourceUrl": "https://en.guazi.com",
-    "placeholder": true
+    "brand": "BYD",
+    "model": "Seal 2022 700 km Long-Range Rear-Wheel-Drive Version",
+    "price": "23 310 €",
+    "image": "images/china/byd-71788.jpg",
+    "sourceUrl": "https://en.guazi.com/products/byd-seal-2022-00l-blue-35900km-at-2wd-5-seats-u57yxmjnyh.html"
   },
   {
     "id": 6,
-    "brand": "Geely",
-    "model": "Coolray (2023)",
-    "price": "Скоро",
-    "image": "images/china/geely-coolray.jpg",
-    "sourceUrl": "https://en.guazi.com",
-    "placeholder": true
+    "brand": "BYD",
+    "model": "Han 2025 DM-i Smart Drive 125KM Prestige Model",
+    "price": "27 450 €",
+    "image": "images/china/byd-67765.jpg",
+    "sourceUrl": "https://en.guazi.com/products/byd-han-2025-15l-gray-100km-at-2wd-5-seats-bwznhv2hdb.html"
   },
   {
     "id": 7,
-    "brand": "Xpeng",
-    "model": "G6 (2024)",
-    "price": "Скоро",
-    "image": "images/china/xpeng-g6.jpg",
-    "sourceUrl": "https://en.guazi.com",
-    "placeholder": true
+    "brand": "BYD",
+    "model": "Seal 2025 650 Long-Range Version",
+    "price": "22 680 €",
+    "image": "images/china/byd-6492.jpg",
+    "sourceUrl": "https://en.guazi.com/products/byd-seal-2025-00l-blue-90000km-at-2wd-5-seats-ncyev5ueey.html"
   },
   {
     "id": 8,
-    "brand": "NIO",
-    "model": "ET5 (2024)",
-    "price": "Скоро",
-    "image": "images/china/nio-et5.jpg",
-    "sourceUrl": "https://en.guazi.com",
-    "placeholder": true
+    "brand": "BYD",
+    "model": "Tang L 2025 DM 215KM LiDAR Flagship Model",
+    "price": "32 760 €",
+    "image": "images/china/byd-76021.jpg",
+    "sourceUrl": "https://en.guazi.com/products/byd-tang-l-2025-15l-gray-15000km-at-2wd-7-seats-z2dykanexd.html"
   }
 ]
