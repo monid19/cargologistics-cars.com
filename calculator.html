@@ -8,40 +8,41 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="index.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<script src="i18n.js"></script>
 </head>
 <body>
 
     <!-- NAV -->
     <nav>
       <a class="nav-logo" href="/"><img src="Logo-3.png" alt="Cargo Logistics"></a>
-      <button class="nav-toggle" aria-label="Меню"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Меню" data-i18n-aria="nav.menu"><span></span><span></span><span></span></button>
       <ul class="nav-links">
-        <li><a href="/calculator" class="active">Калкулатор</a></li>
-        <li><a href="/about">За нас</a></li>
+        <li><a href="/calculator" class="active" data-i18n="nav.calculator">Калкулатор</a></li>
+        <li><a href="/about" data-i18n="nav.about">За нас</a></li>
         <li><a href="/faq">FAQ</a></li>
-        <li><a href="/#contact" class="nav-cta">Запитване</a></li>
+        <li><a href="/#contact" class="nav-cta" data-i18n="nav.inquiry">Запитване</a></li>
       </ul>
     </nav>
 
     <section class="pricing-section" style="padding-top: 120px;">
-      <div class="section-tag fade-up">Калкулатор</div>
-      <h2 class="fade-up">Колко ще струва вашата кола?</h2>
+      <div class="section-tag fade-up" data-i18n="calc.tag">Калкулатор</div>
+      <h2 class="fade-up" data-i18n="calc.title">Колко ще струва вашата кола?</h2>
 
       <div class="slider-calc-wrap fade-up" style="transition-delay:0.1s">
 
        <!-- Slider side -->
     <div class="slider-side">
       <div class="slider-car-price-display">
-        <span class="scp-label">Цена на автомобила в Корея</span>
+        <span class="scp-label" data-i18n="calc.scp.label">Цена на автомобила в Корея</span>
         <div class="scp-value-wrap">
           <span class="scp-value" id="scp-display">10 000 000 ₩</span>
         </div>
-        <div class="scp-eur-equiv"> <span id="scp-eur-equiv">-</span> &nbsp;<span class="scp-rate-badge" id="scp-rate-badge">Зарежда курс…</span></div>
+        <div class="scp-eur-equiv"> <span id="scp-eur-equiv">-</span> &nbsp;<span class="scp-rate-badge" id="scp-rate-badge" data-i18n="calc.rate.loading">Зарежда курс…</span></div>
         <div class="scp-divider"></div>
         <br>
         <hr style="border: none; height: 1px; background-color: #ccc; margin: 5px 0;">
         <br>
-        <span class="scp-manual-label">Или въведете точна сума (₩):</span>
+        <span class="scp-manual-label" data-i18n="calc.scp.manual">Или въведете точна сума (₩):</span>
         <div class="calc-input-wrap">
           <input type="number" id="scp-input" class="calc-input" value="10000000" min="1000000" max="50000000" step="500000">
         </div>
@@ -58,24 +59,24 @@
       </div>
 
           <div class="slider-toggles">
-            <p class="slider-toggles-label">Включи допълнителни разходи:</p>
+            <p class="slider-toggles-label" data-i18n="calc.toggles.label">Включи допълнителни разходи:</p>
             <div class="stoggle-row">
               <label class="stoggle">
                 <input type="checkbox" id="s-homologation">
                 <span class="stoggle-box"></span>
-                Хомологация / Технотест
+                <span data-i18n="calc.homologation">Хомологация / Технотест</span>
                 <span class="stoggle-price">+307 €</span>
               </label>
               <label class="stoggle">
                 <input type="checkbox" id="s-gas">
                 <span class="stoggle-box"></span>
-                Газова уредба
+                <span data-i18n="calc.gas">Газова уредба</span>
                 <span class="stoggle-price">+153 €</span>
               </label>
               <label class="stoggle">
                 <input type="checkbox" id="s-sofia">
                 <span class="stoggle-box"></span>
-                Транспорт до София/Пловдив
+                <span data-i18n="calc.sofia">Транспорт до София/Пловдив</span>
                 <span class="stoggle-price">+300 €</span>
               </label>
             </div>
@@ -85,19 +86,19 @@
         <!-- Result side -->
         <div class="slider-result">
           <div class="sr-inner">
-            <div class="sr-label">Ориентировъчна крайна цена</div>
+            <div class="sr-label" data-i18n="calc.sr.label">Ориентировъчна крайна цена</div>
             <div class="sr-total" id="sr-total">- €</div>
-            <div class="sr-note">вкл. транспорт, мито и ДДС</div>
+            <div class="sr-note" data-i18n="calc.sr.note">вкл. транспорт, мито и ДДС</div>
 
             <div class="sr-breakdown">
-              <div class="sr-row"><span>Цена на колата (в EUR)</span><span id="sr-car">-</span></div>
-              <div class="sr-row"><span>Транспорт &amp; логистика</span><span>~1 680 €</span></div>
-              <div class="sr-row sr-tax"><span>Мито + ДДС</span><span id="sr-taxes">-</span></div>
-              <div class="sr-row" id="sr-extras-row" style="display:none"><span>Допълнителни</span><span id="sr-extras">-</span></div>
+              <div class="sr-row"><span data-i18n="calc.sr.car">Цена на колата (в EUR)</span><span id="sr-car">-</span></div>
+              <div class="sr-row"><span data-i18n="calc.sr.transport">Транспорт &amp; логистика</span><span>~1 680 €</span></div>
+              <div class="sr-row sr-tax"><span data-i18n="calc.sr.taxes">Мито + ДДС</span><span id="sr-taxes">-</span></div>
+              <div class="sr-row" id="sr-extras-row" style="display:none"><span data-i18n="calc.sr.extras">Допълнителни</span><span id="sr-extras">-</span></div>
             </div>
 
-            <p class="sr-disclaimer">* Ориентировъчна стойност. Точната цена зависи от конкретния автомобил.</p>
-            <a href="/#contact" class="btn-lime" style="display:block;text-align:center;margin-top:1.2rem;">Получи точна оферта →</a>
+            <p class="sr-disclaimer" data-i18n="calc.sr.disclaimer">* Ориентировъчна стойност. Точната цена зависи от конкретния автомобил.</p>
+            <a href="/#contact" class="btn-lime" style="display:block;text-align:center;margin-top:1.2rem;" data-i18n="calc.btn.quote">Получи точна оферта →</a>
           </div>
         </div>
       </div>
@@ -107,12 +108,12 @@
     <footer>
       <div class="footer-logo"><img src="Logo-2.png" alt="Cargo Logistics"></div>
       <ul class="footer-links">
-        <li><a href="/">Начало</a></li>
-        <li><a href="/#how">Как работи</a></li>
-        <li><a href="/#services">Услуги</a></li>
-        <li><a href="/calculator">Калкулатор</a></li>
-        <li><a href="/about">За нас</a></li>
-        <li><a href="/#contact">Контакти</a></li>
+        <li><a href="/" data-i18n="footer.home">Начало</a></li>
+        <li><a href="/#how" data-i18n="footer.how">Как работи</a></li>
+        <li><a href="/#services" data-i18n="footer.services">Услуги</a></li>
+        <li><a href="/calculator" data-i18n="footer.calculator">Калкулатор</a></li>
+        <li><a href="/about" data-i18n="footer.about">За нас</a></li>
+        <li><a href="/#contact" data-i18n="footer.contacts">Контакти</a></li>
       </ul>
       <div class="footer-copy">© 2025 Cargo Logistics BG - Customs and Logistic Services</div>
     </footer>
@@ -141,7 +142,7 @@ function fmtEur(n) { return n.toLocaleString('bg-BG', { minimumFractionDigits: 0
 
 function sliderUpdate(krwPrice) {
   document.getElementById('scp-display').textContent = fmtKrw(krwPrice);
-  if (!krwPerEur) { document.getElementById('sr-total').textContent = 'Зарежда…'; return; }
+  if (!krwPerEur) { document.getElementById('sr-total').textContent = window.i18n ? window.i18n.t('calc.loading') : 'Зарежда…'; return; }
 
   const carEur = krwPrice / krwPerEur;
   document.getElementById('scp-eur-equiv').textContent = '≈ ' + carEur.toLocaleString('bg-BG', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + ' EUR';
@@ -186,7 +187,7 @@ async function fetchRate() {
     badge.style.background = '#eef6ea';
     sliderUpdate(parseInt(document.getElementById('car-slider').value));
   } catch (err) {
-    badge.textContent = 'Курсът е недостъпен';
+    badge.textContent = window.i18n ? window.i18n.t('calc.rate.error') : 'Курсът е недостъпен';
     badge.style.background = '#fde8e8';
     badge.style.color = '#c0392b';
     krwPerEur = 1480;
