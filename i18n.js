@@ -69,7 +69,7 @@
       /* ── partner ── */
       'partner.tag':     'Наш партньор',
       'partner.title':   'Проверка на място в Корея',
-      'partner.lead':    'Работим с лицензиран автомобилен инспектор в Южна Корея — GP Auto. Те извършват физически оглед на всеки автомобил преди закупуване.',
+      'partner.lead':    'Работим с лицензиран автомобилен инспектор в Южна Корея, GP Auto. Те извършват физически оглед на всеки автомобил преди закупуване.',
       'partner.role':    'Инспектор в Корея',
       'partner.address': '8, Sami-gil, Siheung-si, Gyeonggi-do, Република Корея',
       'test.tag':   'Отзиви',
@@ -290,7 +290,7 @@
       /* ── partner ── */
       'partner.tag':     'Our Partner',
       'partner.title':   'On-Site Inspection in Korea',
-      'partner.lead':    'We work with a licensed vehicle inspector in South Korea — GP Auto. They carry out a physical inspection of every car before purchase.',
+      'partner.lead':    'We work with a licensed vehicle inspector in South Korea, GP Auto. They carry out a physical inspection of every car before purchase.',
       'partner.role':    'Inspector in Korea',
       'partner.address': '8, Sami-gil, Siheung-si, Gyeonggi-do, Republic of Korea',
       'test.tag':   'Reviews',

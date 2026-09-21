@@ -1322,7 +1322,6 @@
     transition: color 0.2s;
   }
   .partner-contacts a:hover { color: var(--lime); }
-  .pc-icon { font-size: 0.85rem; flex-shrink: 0; margin-top: 1px; }
 
   @media (max-width: 640px) {
     .partner-section { padding: 5rem 1.5rem; }

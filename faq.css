@@ -58,6 +58,20 @@ nav {
   border-radius: 4px;
 }
 .nav-cta:hover { background: var(--lime-bright) !important; }
+.lang-toggle {
+  background: transparent;
+  border: 1.5px solid var(--gray-light);
+  color: var(--gray-mid);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.lang-toggle:hover { border-color: var(--green-brand); color: var(--green-brand); }
 
 /* PAGE HERO */
 .page-hero {
