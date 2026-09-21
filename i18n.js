@@ -66,6 +66,12 @@
       'svc.7': 'Митническо представителство в България',
       'svc.8': 'Документи за регистрация в КАТ',
       /* ── testimonials ── */
+      /* ── partner ── */
+      'partner.tag':     'Наш партньор',
+      'partner.title':   'Проверка на място в Корея',
+      'partner.lead':    'Работим с лицензиран автомобилен инспектор в Южна Корея — GP Auto. Те извършват физически оглед на всеки автомобил преди закупуване.',
+      'partner.role':    'Инспектор в Корея',
+      'partner.address': '8, Sami-gil, Siheung-si, Gyeonggi-do, Република Корея',
       'test.tag':   'Отзиви',
       'test.title': 'Какво казват нашите клиенти',
       'test.1': '"Цялият процес беше изключително гладък - от избора на колата до получаването на документите. Препоръчвам на всеки, който иска кола от Корея!"',
@@ -281,6 +287,12 @@
       'svc.7': 'Customs Representation in Bulgaria',
       'svc.8': 'Registration Documents',
       /* ── testimonials ── */
+      /* ── partner ── */
+      'partner.tag':     'Our Partner',
+      'partner.title':   'On-Site Inspection in Korea',
+      'partner.lead':    'We work with a licensed vehicle inspector in South Korea — GP Auto. They carry out a physical inspection of every car before purchase.',
+      'partner.role':    'Inspector in Korea',
+      'partner.address': '8, Sami-gil, Siheung-si, Gyeonggi-do, Republic of Korea',
       'test.tag':   'Reviews',
       'test.title': 'What our clients say',
       'test.1': '"The whole process was extremely smooth — from choosing the car to receiving the documents. I recommend it to anyone who wants a car from Korea!"',
