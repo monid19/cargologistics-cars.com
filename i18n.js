@@ -40,6 +40,7 @@
       'cars.tag.korea':    'Каталог - Корея',
       'cars.tag.china':    'Каталог - Китай',
       'cars.notfound':     'Не намираш каквото търсиш? Виж още обяви в',
+      'cars.soon':         'Скоро',
       'cars.link.encar':   'Виж в Encar.com →',
       'cars.link.listing': 'Виж обявата →',
       /* ── how it works ── */
@@ -94,8 +95,10 @@
       'form.success.title':   'Запитването е изпратено!',
       'form.success.msg':     'Благодарим ви! Ще се свържем с вас в рамките на 24 часа.',
       /* ── ABOUT page ── */
+      'about.hero.title':   'За <em>Cargo</em><br>Logistics',
       'about.hero.eyebrow': 'Нашата история',
       'about.hero.desc':    'Утвърдена българска компания с над 23 години опит в международната логистика, митническото представителство и вноса на автомобили.',
+      'about.stat.years':       'Години опит',
       'about.stat.transparency': 'Прозрачност',
       'about.who.tag':   'Кои сме ние',
       'about.who.title': 'Утвърдени<br>специалисти',
@@ -252,6 +255,7 @@
       'cars.tag.korea':    'Catalog — Korea',
       'cars.tag.china':    'Catalog — China',
       'cars.notfound':     "Can't find what you're looking for? See more listings on",
+      'cars.soon':         'Coming Soon',
       'cars.link.encar':   'View on Encar.com →',
       'cars.link.listing': 'View Listing →',
       /* ── how it works ── */
@@ -306,8 +310,10 @@
       'form.success.title':   'Inquiry Sent!',
       'form.success.msg':     'Thank you! We will contact you within 24 hours.',
       /* ── ABOUT page ── */
+      'about.hero.title':   'About <em>Cargo</em><br>Logistics',
       'about.hero.eyebrow': 'Our Story',
       'about.hero.desc':    'An established Bulgarian company with over 23 years of experience in international logistics, customs representation, and car imports.',
+      'about.stat.years':       'Years of Experience',
       'about.stat.transparency': 'Transparency',
       'about.who.tag':   'Who we are',
       'about.who.title': 'Established<br>Specialists',

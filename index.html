@@ -443,7 +443,7 @@ function renderChinaCars() {
       <div class="car-img${car.image ? '' : ' car-img-placeholder'}" ${car.image ? `style="background-image: url('${car.image}');"` : ''}></div>
       <div class="car-info">
         <h3 class="car-name">${car.brand} ${car.model}</h3>
-        <div class="car-price">${car.price}</div>
+        <div class="car-price">${car.price === 'Скоро' && window.i18n ? window.i18n.t('cars.soon') : car.price}</div>
         <a href="${car.sourceUrl}" target="_blank" class="car-link">${window.i18n ? window.i18n.t('cars.link.listing') : 'Виж обявата →'}</a>
       </div>
     </div>
