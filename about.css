@@ -118,14 +118,13 @@
     z-index: 2;
     padding: 3.5rem 5rem;
     width: 100%;
-    max-width: 1100px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 5rem;
+    justify-content: space-between;
+    gap: 3rem;
   }
 
-  .page-hero-left { max-width: 540px; flex: 1; }
+  .page-hero-left { max-width: 540px; }
   
   .page-eyebrow {
     display: inline-flex;
