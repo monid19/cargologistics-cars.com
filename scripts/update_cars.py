@@ -131,19 +131,20 @@ def is_still_active(car_id: str) -> bool:
     Searches for the specific car ID — if Count is 0 it is sold/removed.
     Defaults to True on ANY error (fail-safe — never removes due to network issue).
     """
-    try:
-        params = {
-            "count": "true",
-            "q":     f"(And.Hidden.N._.Id.{car_id}.)",
-            "sr":    "|ModifiedDate|0|1",
-        }
-        res = requests.get(SEARCH_ENDPOINTS[0], params=params, headers=HEADERS, timeout=12)
-        if res.status_code == 200:
-            data  = res.json()
-            count = data.get("Count", 1)  # default 1 = keep car if field missing
-            return count > 0
-    except Exception:
-        pass
+    params = {
+        "count": "true",
+        "q":     f"(And.Hidden.N._.Id.{car_id}.)",
+        "sr":    "|ModifiedDate|0|1",
+    }
+    for endpoint in SEARCH_ENDPOINTS:
+        try:
+            res = requests.get(endpoint, params=params, headers=HEADERS, timeout=12)
+            if res.status_code == 200:
+                data  = res.json()
+                count = data.get("Count", 1)  # default 1 = keep car if field missing
+                return count > 0
+        except Exception:
+            continue
     return True  # fail-safe
 
 
@@ -243,6 +244,17 @@ def main() -> None:
         else:
             print(f"  [SOLD]   {car['brand']} {car['model']} - removed")
         time.sleep(0.5)
+
+    # Guard: if >50% of cars would be removed in one run, the API is likely
+    # rate-limiting GitHub Actions (returning Count=0 for everything).
+    # Abort to avoid wiping the catalog on a bad response.
+    if existing and len(active) < len(existing) * 0.5:
+        print(
+            f"\nABORTING: {len(existing) - len(active)} of {len(existing)} listings "
+            f"would be removed (>{50}%). This is likely an API rate-limit false positive. "
+            f"Keeping existing cars.json unchanged."
+        )
+        return
 
     slots_available = MAX_CARS - len(active)
     print(f"\n{len(active)} active listing(s). {slots_available} slot(s) available (cap: {MAX_CARS}).\n")
