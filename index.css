@@ -1341,56 +1341,81 @@
     margin-top: 2.5rem;
   }
 
-  .testimonial-card {
-    background: var(--white);
-    border: 1px solid #e0eeda;
-    border-radius: 10px;
-    padding: 2rem 1.8rem;
-    transition: box-shadow 0.2s;
-    position: relative;
+  /* TESTIMONIAL SLIDER */
+  .testimonial-slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 14px;
+    overflow: hidden;
+    max-width: 960px;
+    margin: 3rem auto 0;
+    min-height: 380px;
+    box-shadow: 0 8px 40px rgba(22,64,31,0.18);
   }
-  .testimonial-card:hover { box-shadow: 0 8px 32px rgba(28,82,40,0.1); }
-  .testimonial-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--green-accent), var(--lime));
-    border-radius: 10px 10px 0 0;
+  .ts-left {
+    background: var(--green-brand);
+    padding: 2.8rem 2.6rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
   }
-
-  .testimonial-stars {
-    color: #f5a623;
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
+  .ts-stars {
+    color: #f5c842;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.2rem;
+  }
+  .ts-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    margin-bottom: 1.2rem;
+  }
+  .ts-name { font-weight: 700; font-size: 0.92rem; }
+  .ts-ago  { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+  .ts-quote {
+    font-size: 0.87rem;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+    flex: 1;
     margin-bottom: 1rem;
   }
-
-  .testimonial-text {
-    font-size: 0.85rem;
-    color: var(--gray-mid);
-    line-height: 1.8;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 1.5rem;
+  .ts-car-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 1.6rem;
   }
-
-  .testimonial-author {
-    border-top: 1px solid #eef2ec;
-    padding-top: 1rem;
+  .ts-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: auto;
   }
-
-  .testimonial-name {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--green-dark);
+  .ts-btn {
+    background: none;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex; align-items: center; justify-content: center;
+    line-height: 1;
   }
-
-  .testimonial-car {
-    font-size: 0.72rem;
-    color: var(--gray-light);
-    font-weight: 500;
-    margin-top: 0.15rem;
+  .ts-btn:hover { border-color: var(--lime); background: rgba(126,211,33,0.12); }
+  .ts-counter { font-size: 0.78rem; color: rgba(255,255,255,0.45); font-weight: 500; }
+  .ts-right { overflow: hidden; min-height: 280px; }
+  .ts-photo {
+    width: 100%; height: 100%;
+    min-height: 380px;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
   }
 
   /* BLOG */
@@ -1580,38 +1605,6 @@
     border: 1px solid #ddeedd;
   }
 
-  /* ── TESTIMONIAL UPDATES ── */
-  .testimonial-top {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #eef2ec;
-    padding-bottom: 1rem;
-  }
-  .testimonial-avatar {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background-color: var(--green-accent);
-    background-size: cover;
-    background-position: center;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    color: var(--white);
-    font-size: 1.1rem;
-  }
-  .testimonial-date {
-    font-size: 0.7rem;
-    color: var(--gray-light);
-    font-weight: 500;
-    margin-top: 0.15rem;
-  }
-  .testimonial-stars { margin-bottom: 0.8rem; }
-  .testimonial-text { margin-bottom: 0; }
 
   /* ANIMATIONS */
   .fade-up {
@@ -1677,7 +1670,8 @@
     .form-row { grid-template-columns: 1fr; }
     .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
     .stat-item { border-right: none; margin-right: 0; padding-right: 0; }
-    .testimonials-grid { grid-template-columns: 1fr; }
+    .testimonial-slider { grid-template-columns: 1fr; }
+    .ts-right { display: none; }
     .blog-grid { grid-template-columns: 1fr; }
     .costs-section { padding: 5rem 1.5rem; }
     .costs-layout { grid-template-columns: 1fr; }

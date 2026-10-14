@@ -314,42 +314,23 @@
     <section class="testimonials-section" id="testimonials">
       <div class="section-tag fade-up" data-i18n="test.tag">Отзиви</div>
       <h2 class="fade-up" data-i18n="test.title">Какво казват нашите клиенти</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card fade-up">
-          <div class="testimonial-top">
-            <div class="testimonial-avatar" style="background-image:url('review1.jpg')"><span>И</span></div>
-            <div>
-              <div class="testimonial-name">Иван П.</div>
-              <div class="testimonial-car">Hyundai Tucson 2023</div>
-              <div class="testimonial-date" data-i18n="test.1.date">Ноември 2025</div>
-            </div>
+      <div class="testimonial-slider fade-up">
+        <div class="ts-left">
+          <div class="ts-stars">★★★★★</div>
+          <div class="ts-header">
+            <span class="ts-name"></span>
+            <span class="ts-ago"></span>
           </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text" data-i18n="test.1">"Цялият процес беше изключително гладък - от избора на колата до получаването на документите. Препоръчвам на всеки, който иска кола от Корея!"</p>
+          <p class="ts-quote"></p>
+          <div class="ts-car-label"></div>
+          <div class="ts-controls">
+            <button class="ts-btn ts-prev" aria-label="Previous">&#8249;</button>
+            <span class="ts-counter"></span>
+            <button class="ts-btn ts-next" aria-label="Next">&#8250;</button>
+          </div>
         </div>
-        <div class="testimonial-card fade-up" style="transition-delay:0.1s">
-          <div class="testimonial-top">
-            <div class="testimonial-avatar" style="background-image:url('review2.jpg')"><span>Г</span></div>
-            <div>
-              <div class="testimonial-name">Георги М.</div>
-              <div class="testimonial-car">Kia Sportage 2022</div>
-              <div class="testimonial-date" data-i18n="test.2.date">Февруари 2026</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text" data-i18n="test.2">"Спестих над 3000 EUR в сравнение с местните дилъри. Колата пристигна точно в описаното състояние. Благодаря на екипа на Cargo Logistics!"</p>
-        </div>
-        <div class="testimonial-card fade-up" style="transition-delay:0.2s">
-          <div class="testimonial-top">
-            <div class="testimonial-avatar" style="background-image:url('review3.jpg')"><span>М</span></div>
-            <div>
-              <div class="testimonial-name">Мария К.</div>
-              <div class="testimonial-car">Genesis GV70 2023</div>
-              <div class="testimonial-date" data-i18n="test.3.date">Март 2025</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text" data-i18n="test.3">"Професионално отношение от начало до край. Всичко беше прозрачно - знаех точно за какво плащам. Вече планирам втора кола!"</p>
+        <div class="ts-right">
+          <div class="ts-photo"></div>
         </div>
       </div>
     </section>
@@ -530,6 +511,53 @@ document.addEventListener('langchange', () => {
   if (allCars.length) renderCars();
   if (allChinaCars.length) renderChinaCars();
 });
+
+// Testimonial slider
+const REVIEWS = {
+  bg: [
+    { name: 'Иван П.',      ago: 'преди 3 м.',  car: 'Audi A8',            photo: 'review-car-1.jpg', text: '"Цялият процес беше изключително гладък - от избора на колата до получаването на документите. Препоръчвам на всеки, който иска кола от Корея!"' },
+    { name: 'Георги М.',    ago: 'преди 8 м.',  car: 'Mercedes S-Class',   photo: 'review-car-2.jpg', text: '"Спестих над 3000 EUR в сравнение с местните дилъри. Колата пристигна точно в описаното състояние. Благодаря на екипа на Cargo Logistics!"' },
+    { name: 'Мария К.',     ago: 'преди 6 м.',  car: 'Volkswagen Arteon',  photo: 'review-car-3.jpg', text: '"Професионално отношение от начало до край. Всичко беше прозрачно - знаех точно за какво плащам. Вече планирам втора кола!"' },
+    { name: 'Стефан Д.',    ago: 'преди 1 м.',  car: 'Hyundai Sonata',     photo: 'review-car-4.jpg', text: '"Страхотна услуга! Екипът отговори на всичките ми въпроси, а колата пристигна в отлично състояние. Изцяло препоръчвам!"' },
+    { name: 'Красимир Т.',  ago: 'преди 4 м.',  car: 'Hyundai Palisade',   photo: 'review-car-5.jpg', text: '"Изключително доволен от целия процес. Прозрачни цени, без изненади, и колата е точно каквато очаквах. Благодаря!"' },
+  ],
+  en: [
+    { name: 'Ivan P.',      ago: '3 months ago', car: 'Audi A8',           photo: 'review-car-1.jpg', text: '"The whole process was extremely smooth — from choosing the car to receiving the documents. I recommend it to anyone who wants a car from Korea!"' },
+    { name: 'Georgi M.',    ago: '8 months ago', car: 'Mercedes S-Class',  photo: 'review-car-2.jpg', text: '"I saved over €3,000 compared to local dealers. The car arrived in exactly the described condition. Thank you to the Cargo Logistics team!"' },
+    { name: 'Maria K.',     ago: '6 months ago', car: 'Volkswagen Arteon', photo: 'review-car-3.jpg', text: '"Professional from start to finish. Everything was transparent — I knew exactly what I was paying for. I\'m already planning a second car!"' },
+    { name: 'Stefan D.',    ago: '1 month ago',  car: 'Hyundai Sonata',    photo: 'review-car-4.jpg', text: '"Great service! The team answered all my questions and the car arrived in excellent condition. Highly recommended!"' },
+    { name: 'Krasimir T.',  ago: '4 months ago', car: 'Hyundai Palisade',  photo: 'review-car-5.jpg', text: '"Extremely satisfied with the whole process. Transparent pricing, no surprises, and the car was exactly as expected. Thank you!"' },
+  ]
+};
+
+let tsIdx = 0;
+function renderReview() {
+  const lang = window.i18n ? window.i18n.getLang() : 'bg';
+  const reviews = REVIEWS[lang] || REVIEWS.bg;
+  const r = reviews[tsIdx];
+  document.querySelector('.ts-name').textContent   = r.name;
+  document.querySelector('.ts-ago').textContent    = r.ago;
+  document.querySelector('.ts-quote').textContent  = r.text;
+  document.querySelector('.ts-car-label').textContent = r.car;
+  document.querySelector('.ts-photo').style.backgroundImage = `url('${r.photo}')`;
+  document.querySelector('.ts-counter').textContent = `${tsIdx + 1}/${reviews.length}`;
+}
+const tsPrev = document.querySelector('.ts-prev');
+const tsNext = document.querySelector('.ts-next');
+if (tsPrev && tsNext) {
+  tsPrev.addEventListener('click', () => {
+    const lang = window.i18n ? window.i18n.getLang() : 'bg';
+    tsIdx = (tsIdx - 1 + REVIEWS[lang].length) % REVIEWS[lang].length;
+    renderReview();
+  });
+  tsNext.addEventListener('click', () => {
+    const lang = window.i18n ? window.i18n.getLang() : 'bg';
+    tsIdx = (tsIdx + 1) % REVIEWS[lang].length;
+    renderReview();
+  });
+}
+document.addEventListener('langchange', () => { tsIdx = 0; renderReview(); });
+renderReview();
 
 // Contact form AJAX
 const contactForm = document.getElementById('contact-form');
