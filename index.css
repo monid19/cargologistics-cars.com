@@ -1458,6 +1458,161 @@
     font-weight: 400;
   }
 
+  /* CONTACT scroll offset fix */
+  .contact-section { scroll-margin-top: 72px; }
+
+  /* ── COST TRANSPARENCY ── */
+  .costs-section {
+    background: var(--off-white);
+    padding: 6rem 5rem;
+    text-align: center;
+  }
+  .costs-section .section-tag { color: var(--green-accent); }
+  .costs-section .section-tag::before { background: var(--green-accent); }
+  .costs-section h2 { margin-bottom: 0.6rem; }
+  .costs-lead {
+    font-size: 0.9rem;
+    color: var(--gray-mid);
+    max-width: 540px;
+    margin: 0 auto 3rem;
+    line-height: 1.75;
+  }
+  .costs-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: left;
+  }
+  .costs-breakdown {
+    background: var(--white);
+    border: 1px solid #ddeedd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 1.4rem;
+    border-bottom: 1px solid #eef5ec;
+    font-size: 0.82rem;
+  }
+  .cost-row:last-child { border-bottom: none; }
+  .cost-name { color: var(--gray-mid); font-weight: 500; }
+  .cost-val { font-weight: 600; color: var(--green-dark); }
+  .cost-row--zero .cost-name { color: var(--green-accent); }
+  .cost-zero { color: var(--lime) !important; font-weight: 700; }
+  .cost-row--total {
+    background: var(--green-dark);
+  }
+  .cost-row--total .cost-name { color: rgba(255,255,255,0.8); font-weight: 600; }
+  .cost-row--total .cost-val { color: var(--lime); font-size: 0.95rem; }
+  .costs-calc-btn {
+    display: block;
+    text-align: center;
+    margin: 1.2rem 1.4rem;
+    border-radius: 4px;
+    font-size: 0.84rem;
+    text-decoration: none;
+    padding: 0.75rem 1.4rem;
+  }
+  .costs-traps {
+    background: var(--green-dark);
+    border-radius: 10px;
+    padding: 1.8rem 1.6rem;
+    color: var(--white);
+  }
+  .trap-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 1.2rem;
+  }
+  .trap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .trap-list li {
+    font-size: 0.83rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  .trap-list li::before {
+    content: '✕';
+    position: absolute;
+    left: 0;
+    color: #e05050;
+    font-size: 0.7rem;
+    top: 0.15rem;
+  }
+  .delivered-photos { margin-top: 3.5rem; }
+  .delivered-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green-accent);
+    margin-bottom: 1.2rem;
+  }
+  .delivered-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .delivered-photo {
+    aspect-ratio: 4/3;
+    border-radius: 8px;
+    background-color: #d4e8d4;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ddeedd;
+  }
+
+  /* ── TESTIMONIAL UPDATES ── */
+  .testimonial-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eef2ec;
+    padding-bottom: 1rem;
+  }
+  .testimonial-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--green-accent);
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 1.1rem;
+  }
+  .testimonial-date {
+    font-size: 0.7rem;
+    color: var(--gray-light);
+    font-weight: 500;
+    margin-top: 0.15rem;
+  }
+  .testimonial-stars { margin-bottom: 0.8rem; }
+  .testimonial-text { margin-bottom: 0; }
+
   /* ANIMATIONS */
   .fade-up {
     opacity: 0;
@@ -1524,4 +1679,7 @@
     .stat-item { border-right: none; margin-right: 0; padding-right: 0; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .blog-grid { grid-template-columns: 1fr; }
+    .costs-section { padding: 5rem 1.5rem; }
+    .costs-layout { grid-template-columns: 1fr; }
+    .delivered-grid { grid-template-columns: 1fr 1fr; }
   }
