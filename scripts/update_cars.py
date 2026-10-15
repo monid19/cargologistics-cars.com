@@ -243,18 +243,18 @@ def main() -> None:
             print(f"  [OK]     {car['brand']} {car['model']}")
         else:
             print(f"  [SOLD]   {car['brand']} {car['model']} - removed")
-        time.sleep(0.5)
+        time.sleep(1.5)
 
     # Guard: if >50% of cars would be removed in one run, the API is likely
     # rate-limiting GitHub Actions (returning Count=0 for everything).
-    # Abort to avoid wiping the catalog on a bad response.
-    if existing and len(active) < len(existing) * 0.5:
+    # Keep ALL existing cars instead of removing — but still try to add new ones.
+    rate_limited = existing and len(active) < len(existing) * 0.5
+    if rate_limited:
         print(
-            f"\nABORTING: {len(existing) - len(active)} of {len(existing)} listings "
-            f"would be removed (>{50}%). This is likely an API rate-limit false positive. "
-            f"Keeping existing cars.json unchanged."
+            f"\nRATE-LIMIT GUARD: {len(existing) - len(active)} of {len(existing)} listings "
+            f"appeared sold (>{50}%). Keeping all existing cars, skipping removals."
         )
-        return
+        active = existing  # restore — don't remove anything
 
     slots_available = MAX_CARS - len(active)
     print(f"\n{len(active)} active listing(s). {slots_available} slot(s) available (cap: {MAX_CARS}).\n")
