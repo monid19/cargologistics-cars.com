@@ -1641,6 +1641,17 @@
   }
 
   /* RESPONSIVE */
+  /* Page flex wrapper — enables CSS order for mobile contact-first layout */
+  .page-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Desktop: contact section stays at bottom (natural DOM position overridden) */
+  @media (min-width: 961px) {
+    .contact-section { order: 100; }
+  }
+
   @media (max-width: 960px) {
     .cars-grid { grid-template-columns: repeat(2, 1fr); }
     nav { padding: 0 1.5rem; }
