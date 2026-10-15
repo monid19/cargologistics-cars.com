@@ -436,7 +436,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    direction: rtl;
   }
+  .svcp-layout > * { direction: ltr; }
 
   /* LEFT col: title + photo + Danny card */
   .svcp-right {
