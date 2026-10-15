@@ -1,6 +1,6 @@
 """
-Auto-updates cars.json with new listings from Encar.
-- Removes sold/unavailable listings automatically
+Auto-updates cars.json with fresh listings from Encar.
+- Replaces the entire catalog each run with the latest search results
 - Keeps the site capped at MAX_CARS listings
 - Runs daily via GitHub Actions
 """
@@ -8,8 +8,6 @@ Auto-updates cars.json with new listings from Encar.
 import json
 import os
 import re
-import sys
-import time
 import requests
 
 # ---------------------------------------------------------------------------
@@ -223,6 +221,33 @@ def save(cars: list) -> None:
         json.dump(cars, f, ensure_ascii=False, indent=2)
 
 
+def build_car_entry(item: dict, idx: int, rate: float) -> dict:
+    car_id    = str(item.get("Id", ""))
+    price_man = item.get("Price", 0)
+    krw       = price_man * 10_000
+    turnkey   = calc_turnkey(krw, rate)
+    raw_brand = item.get("Manufacturer", "")
+    brand     = BRAND_MAP.get(raw_brand, raw_brand)
+    raw_model = (item.get("ModelGroup", "") or item.get("Model", "") or "").strip()
+    model     = raw_model
+    for k, v in sorted(MODEL_MAP.items(), key=lambda x: -len(x[0])):
+        if k in raw_model:
+            model = v
+            break
+    badge     = (item.get("Badge", "") or "").strip()
+    raw_year  = str(item.get("Year", "") or "")
+    year      = raw_year[:4] if len(raw_year) >= 4 else raw_year
+    model_str = f"{model} {badge} ({year})".strip() if badge else f"{model} ({year})"
+    return {
+        "id":       idx,
+        "brand":    brand,
+        "model":    model_str,
+        "price":    format_price(turnkey),
+        "image":    photo_url(item),
+        "encarUrl": f"https://fem.encar.com/cars/detail/{car_id}",
+    }
+
+
 def main() -> None:
     print("--- Cargo Logistics car listing updater ---\n")
 
@@ -231,87 +256,35 @@ def main() -> None:
     print(f"  1 EUR = {rate:,.0f} KRW\n")
 
     existing = load_existing()
-    print(f"Checking {len(existing)} existing listing(s) for availability...")
-    active = []
-    for car in existing:
-        car_id = extract_car_id(car.get("encarUrl", ""))
-        if not car_id:
-            active.append(car)
-            continue
-        if is_still_active(car_id):
-            active.append(car)
-            print(f"  [OK]     {car['brand']} {car['model']}")
-        else:
-            print(f"  [SOLD]   {car['brand']} {car['model']} - removed")
-        time.sleep(1.5)
 
-    # Guard: if >50% of cars would be removed in one run, the API is likely
-    # rate-limiting GitHub Actions (returning Count=0 for everything).
-    # Keep ALL existing cars instead of removing — but still try to add new ones.
-    rate_limited = existing and len(active) < len(existing) * 0.5
-    if rate_limited:
-        print(
-            f"\nRATE-LIMIT GUARD: {len(existing) - len(active)} of {len(existing)} listings "
-            f"appeared sold (>{50}%). Keeping all existing cars, skipping removals."
-        )
-        active = existing  # restore — don't remove anything
-
-    slots_available = MAX_CARS - len(active)
-    print(f"\n{len(active)} active listing(s). {slots_available} slot(s) available (cap: {MAX_CARS}).\n")
-
-    if slots_available <= 0:
-        print("Site is at capacity. No new listings needed.")
-        if len(active) != len(existing):
-            save(active)
-        return
-
-    print("Fetching new listings from Encar...")
+    # Fetch a fresh batch from Encar search (no per-car active checks —
+    # those were getting rate-limited on GitHub Actions IPs).
+    print("Fetching fresh listings from Encar...")
     raw = fetch_new_listings()
     print(f"  {len(raw)} listing(s) matched filters\n")
 
-    known_ids = {extract_car_id(c.get("encarUrl", "")) for c in active}
-    added = []
+    # Guard: if API returned too few results it is likely rate-limited.
+    # Keep the existing catalog unchanged rather than wiping it.
+    if len(raw) < 3:
+        print(
+            f"Too few results ({len(raw)}) — API may be rate-limiting. "
+            f"Keeping existing cars.json unchanged."
+        )
+        return
 
+    fresh = []
     for item in raw:
-        if len(added) >= slots_available:
+        if len(fresh) >= MAX_CARS:
             break
         car_id = str(item.get("Id", ""))
-        if not car_id or car_id in known_ids:
+        if not car_id:
             continue
+        entry = build_car_entry(item, len(fresh) + 1, rate)
+        fresh.append(entry)
+        print(f"  [NEW]  {entry['brand']} {entry['model']} — {entry['price']}")
 
-        price_man = item.get("Price", 0)
-        krw       = price_man * 10_000
-        turnkey   = calc_turnkey(krw, rate)
-        raw_brand = item.get("Manufacturer", "")
-        brand     = BRAND_MAP.get(raw_brand, raw_brand)
-        raw_model = (item.get("ModelGroup", "") or item.get("Model", "") or "").strip()
-        # Try longest-match first in MODEL_MAP for compound Korean names
-        model = raw_model
-        for k, v in sorted(MODEL_MAP.items(), key=lambda x: -len(x[0])):
-            if k in raw_model:
-                model = v
-                break
-        badge     = (item.get("Badge",  "") or "").strip()
-        # Year comes as YYYYMM.0 — extract just the 4-digit year
-        raw_year  = str(item.get("Year", "") or "")
-        year      = raw_year[:4] if len(raw_year) >= 4 else raw_year
-        model_str = f"{model} {badge} ({year})".strip() if badge else f"{model} ({year})"
-
-        added.append({
-            "id":       len(active) + len(added) + 1,
-            "brand":    brand,
-            "model":    model_str,
-            "price":    format_price(turnkey),
-            "image":    photo_url(item),
-            "encarUrl": f"https://fem.encar.com/cars/detail/{car_id}",
-        })
-        known_ids.add(car_id)
-        print(f"  [NEW]    {brand} {model_str} - {format_price(turnkey)}")
-
-    final = active + added
-    save(final)
-    print(f"\nDone. {len(added)} added, {len(existing) - len(active)} removed. "
-          f"Total: {len(final)}/{MAX_CARS}.")
+    save(fresh)
+    print(f"\nDone. Replaced {len(existing)} old listings with {len(fresh)} fresh ones.")
 
 
 if __name__ == "__main__":
