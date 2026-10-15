@@ -541,6 +541,7 @@
     margin-bottom: 0.75rem;
   }
   .svcp-cards .service-icon svg { fill: var(--green-brand); }
+  .svcp-cards .service-icon--stroke svg { fill: none; }
   .svcp-cards .service-card h3 {
     font-size: 0.74rem;
     font-weight: 600;

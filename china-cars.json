@@ -1,66 +1,66 @@
 [
   {
-    "id": 1,
     "brand": "BYD",
-    "model": "Yuan UP 2024 401KM Beyond Edition",
-    "price": "17 240 €",
-    "image": "images/china/byd-yuan-up.jpg",
-    "sourceUrl": "https://en.guazi.com/products/byd-yuan-up-2024-00l-gray-19100km-at-2wd-5-seats-jluknuc9ql.html"
+    "model": "Qin Plus (2021)",
+    "image": "https://m.tichetech.com/used/6/18595896/7a7d39230774cc5892ec33cb3a747ecb894fae897a126390d0a85b60a2432f11_e7x.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Qin-Plus-ACU91112137",
+    "price": "9 630 €",
+    "id": 1
   },
   {
-    "id": 2,
     "brand": "BYD",
-    "model": "Seal 07 DM-i 2026 DM-i 1.5T 230km Flagship Edition",
-    "price": "27 060 €",
-    "image": "images/china/byd-27003.jpg",
-    "sourceUrl": "https://en.guazi.com/products/byd-seal-07-dm-i-2026-15l-white-12100km-at-2wd-5-seats-fghme9w43k.html"
+    "model": "Sea Lion 05 DM-i (2025)",
+    "image": "https://m.tichetech.com/used/6/18600995/dc77a4f5161071b1560ae4ee68d4122216d3f67708fad7001b59ef67ab9320fa_Yqg.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Sea-Lion-05-DM-i-ACU91112021",
+    "price": "17 960 €",
+    "id": 2
   },
   {
-    "id": 3,
     "brand": "BYD",
-    "model": "Yuan PLUS 2022 430 km Luxury Version",
-    "price": "14 940 €",
-    "image": "images/china/byd-14042.jpg",
-    "sourceUrl": "https://en.guazi.com/products/byd-yuan-plus-2022-00l-white-81300km-at-2wd-5-seats-ey2vzew2qk.html"
+    "model": "Dolphin BEV 44.9KWH (2021)",
+    "image": "https://m.tichetech.com/used/6/18593525/522da3829836b4609bd3dcaa21eb3b3e9a4b2e2b6987ef6253c0631ed0c399ab_haE.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Dolphin-ACU91112199",
+    "price": "11 510 €",
+    "id": 3
   },
   {
-    "id": 4,
     "brand": "BYD",
-    "model": "Seal 07 DM-i 2025 DM-i 1.5T 125km Flagship Model",
-    "price": "23 500 €",
-    "image": "images/china/byd-40971.jpg",
-    "sourceUrl": "https://en.guazi.com/products/byd-seal-07-dm-i-2025-15l-black-39900km-at-2wd-5-seats-jwuqykpsea.html"
+    "model": "Seagull BEV 30.08KWH 305km (2024)",
+    "image": "https://m.tichetech.com/used/6/18599869/ae19ad8fe92a3f24575da4c60a10f9c86ecaae6ee5a7ce4f9e6724bb04bc85ad_PSt.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Seagull-ACU91112053",
+    "price": "10 470 €",
+    "id": 4
   },
   {
-    "id": 5,
     "brand": "BYD",
-    "model": "Seal 2022 700 km Long-Range Rear-Wheel-Drive Version",
-    "price": "23 310 €",
-    "image": "images/china/byd-71788.jpg",
-    "sourceUrl": "https://en.guazi.com/products/byd-seal-2022-00l-blue-35900km-at-2wd-5-seats-u57yxmjnyh.html"
+    "model": "Qin Plus BEV 57.6KWH 510km (2023)",
+    "image": "https://m.tichetech.com/used/6/18598500/bd8b9e46041bee62d1faa64408bce93b6cef4a60901330f79c8439a3dc83c464_N9w.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Qin-Plus-ACU91112082",
+    "price": "14 320 €",
+    "id": 5
   },
   {
-    "id": 6,
     "brand": "BYD",
-    "model": "Han 2025 DM-i Smart Drive 125KM Prestige Model",
-    "price": "27 450 €",
-    "image": "images/china/byd-67765.jpg",
-    "sourceUrl": "https://en.guazi.com/products/byd-han-2025-15l-gray-100km-at-2wd-5-seats-bwznhv2hdb.html"
+    "model": "Dolphin BEV 44.928KWH 420km (2025)",
+    "image": "https://m.tichetech.com/used/6/18593529/f9a02f4e64e73eeaf22dfb636b59f80f3ced765ab5795ecfa39d5c9f281eeb61_cHD.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Dolphin-ACU91112200",
+    "price": "16 030 €",
+    "id": 6
   },
   {
-    "id": 7,
     "brand": "BYD",
-    "model": "Seal 2025 650 Long-Range Version",
-    "price": "22 680 €",
-    "image": "images/china/byd-6492.jpg",
-    "sourceUrl": "https://en.guazi.com/products/byd-seal-2025-00l-blue-90000km-at-2wd-5-seats-ncyev5ueey.html"
+    "model": "Song Pro New Energy (2023)",
+    "image": "https://m.tichetech.com/used/6/18595975/6eb891df651b84759227ad8d51e56014ff707194a27e36ffbb7c41b83c445f0f_cyS.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-Pro-New-Energy-ACU91112141",
+    "price": "13 110 €",
+    "id": 7
   },
   {
-    "id": 8,
     "brand": "BYD",
-    "model": "Tang L 2025 DM 215KM LiDAR Flagship Model",
-    "price": "32 760 €",
-    "image": "images/china/byd-76021.jpg",
-    "sourceUrl": "https://en.guazi.com/products/byd-tang-l-2025-15l-gray-15000km-at-2wd-7-seats-z2dykanexd.html"
+    "model": "Song Plus New Energy BEV 71.8KWH 520km (2025)",
+    "image": "https://m.tichetech.com/used/6/18592439/b30af6560a64fda340f4fbf90726d4def2a2eb9e70716082544448404fb09c00_1qS.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-Plus-New-Energy-ACU91112183",
+    "price": "22 810 €",
+    "id": 8
   }
 ]
