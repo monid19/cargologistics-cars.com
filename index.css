@@ -1324,6 +1324,7 @@
   .partner-contacts a:hover { color: var(--lime); }
 
   @media (max-width: 640px) {
+    .cars-grid { grid-template-columns: 1fr; }
     .partner-section { padding: 5rem 1.5rem; }
     .partner-card { flex-direction: column; }
     .partner-logo-wrap { width: 100%; padding: 1.8rem; }
@@ -1641,6 +1642,7 @@
 
   /* RESPONSIVE */
   @media (max-width: 960px) {
+    .cars-grid { grid-template-columns: repeat(2, 1fr); }
     nav { padding: 0 1.5rem; }
     .nav-toggle { display: flex; }
     .nav-links {
