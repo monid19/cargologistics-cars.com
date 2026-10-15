@@ -423,20 +423,27 @@
   .step-body p { font-size: 0.83rem; color: var(--gray-light); line-height: 1.7; font-weight: 400; }
   
   /* SERVICES */
-  .services-section { background: var(--green-brand); }
-  .services-section .section-tag { color: var(--lime-pale); }
-  .services-section h2 { color: var(--white); }
-  
-  .services-lead {
-    font-size: 0.92rem;
-    color: rgba(255,255,255,0.6);
-    max-width: 560px;
-    line-height: 1.8;
-    margin-bottom: 3.5rem;
-    margin-top: 0.5rem;
-    font-weight: 400;
+  .services-section {
+    background: var(--green-brand);
+    padding: 0;
   }
-  
+
+  /* Merged services + partner layout */
+  .svcp-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 640px;
+  }
+
+  /* LEFT: stacked service cards */
+  .svcp-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    align-content: start;
+  }
+
   .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -445,6 +452,99 @@
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 8px;
     overflow: hidden;
+  }
+
+  /* RIGHT column */
+  .svcp-right {
+    padding: 3.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0,0,0,0.15);
+    border-left: 1px solid rgba(255,255,255,0.06);
+  }
+  .svcp-right .section-tag { color: var(--lime-pale); }
+  .svcp-right h2 {
+    color: var(--white);
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+  }
+  .svcp-lead {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.58);
+    line-height: 1.8;
+    margin-bottom: 1.6rem;
+  }
+  .svcp-photo-wrap {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.4rem;
+    flex-shrink: 0;
+  }
+  .svcp-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .svcp-danny {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(126,211,33,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .svcp-danny-logo {
+    background: #111;
+    padding: 1rem 1.4rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .svcp-danny-logo img {
+    width: 90px;
+    height: auto;
+    display: block;
+  }
+  .svcp-danny-info {
+    padding: 1rem 1.2rem;
+    border-left: 1px solid rgba(126,211,33,0.2);
+  }
+  .svcp-danny-role {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 0.2rem;
+  }
+  .svcp-danny-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+  .svcp-danny-contact {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+
+  .services-section .section-tag { color: var(--lime-pale); }
+  .services-section h2 { color: var(--white); }
+
+  .services-lead {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.6);
+    max-width: 560px;
+    line-height: 1.8;
+    margin-bottom: 3.5rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
   }
   
   .service-card {
@@ -1682,6 +1782,8 @@
     .hero-shared { padding: 1.5rem 1.5rem 3rem; }
     .how-layout { grid-template-columns: 1fr; gap: 2rem; }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .svcp-layout { grid-template-columns: 1fr; }
+    .svcp-right { padding: 2.5rem 1.5rem; border-left: none; border-top: 1px solid rgba(255,255,255,0.06); }
     .pricing-layout { grid-template-columns: 1fr; }
     .tips-grid { grid-template-columns: 1fr; }
     .calc-layout { grid-template-columns: 1fr; }
