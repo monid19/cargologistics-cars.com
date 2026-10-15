@@ -91,7 +91,7 @@ CONTEXT_KWARGS = dict(
 )
 
 
-def fetch_product_page(browser, product_url: str, brand_name: str) -> dict | None:
+def fetch_product_page(browser, product_url: str, brand_name: str):
     """Open a fresh browser context for each product page to avoid rate-limiting."""
     ctx = browser.new_context(**CONTEXT_KWARGS)
     try:

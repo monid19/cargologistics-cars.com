@@ -204,7 +204,7 @@ def photo_url(item: dict) -> str:
     )
 
 
-def extract_car_id(url: str) -> str | None:
+def extract_car_id(url: str):
     m = re.search(r"/detail/(\d+)", url)
     return m.group(1) if m else None
 
