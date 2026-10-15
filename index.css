@@ -443,8 +443,6 @@
     flex-direction: column;
     gap: 1.3rem;
   }
-  .svcp-right .section-tag { color: var(--green-brand); }
-  .svcp-right .section-tag::before { background: var(--green-brand); }
   .svcp-right h2 {
     color: var(--green-dark);
     font-size: clamp(1.5rem, 2.8vw, 2.1rem);
@@ -560,7 +558,6 @@
     overflow: hidden;
   }
 
-  .services-section .section-tag { color: var(--green-brand); }
   .services-section h2 { color: var(--green-dark); }
 
   .services-lead {
