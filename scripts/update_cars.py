@@ -28,6 +28,8 @@ EXCLUDE_MODELS = {
     "캐스퍼", "레이", "모닝", "다마스", "라보",          # micro/kei cars
     "스타렉스", "그랜드 스타렉스", "더 뉴 그랜드 스타렉스",  # vans/buses
     "카운티", "마이티", "포터", "봉고",                   # trucks/commercial
+    "마스터", "트랜스포터", "스프린터",                    # large vans
+    "어린이 보호차", "어린이통학버스",                      # school buses
 }
 
 MODEL_MAP = {
@@ -79,6 +81,9 @@ BRAND_MAP = {
     "쉐보레":   "Chevrolet",
     "캐딜락":   "Cadillac",
 }
+
+# Manufacturers with no known European export market — skip them
+EXCLUDE_BRANDS = {"르노코리아(삼성)", "쉐보레(GM대우)", "대우", "삼성", "쌍용"}
 
 FRANKFURTER_API = "https://api.frankfurter.dev/v1/latest?base=EUR&symbols=KRW"
 WEBSITE_TAX_KRW = 440_000
@@ -175,13 +180,24 @@ def fetch_new_listings() -> list:
                 print(f"  Search succeeded: {endpoint} | query: {query}")
 
                 # Filter in Python — safe regardless of which query worked
-                filtered = [
-                    item for item in results
-                    if (cfg["min_price_man"] <= item.get("Price", 0) <= cfg["max_price_man"]
-                        and item.get("Mileage", 0) <= cfg["max_mileage"]
-                        and item.get("Year",    0) >= cfg["min_year"]
-                        and item.get("ModelGroup", "") not in EXCLUDE_MODELS)
-                ]
+                seen_ids = set()
+                filtered = []
+                for item in results:
+                    car_id = str(item.get("Id", ""))
+                    if car_id in seen_ids:
+                        continue
+                    seen_ids.add(car_id)
+                    if not (cfg["min_price_man"] <= item.get("Price", 0) <= cfg["max_price_man"]):
+                        continue
+                    if item.get("Mileage", 0) > cfg["max_mileage"]:
+                        continue
+                    if item.get("Year", 0) < cfg["min_year"]:
+                        continue
+                    if item.get("ModelGroup", "") in EXCLUDE_MODELS:
+                        continue
+                    if item.get("Manufacturer", "") in EXCLUDE_BRANDS:
+                        continue
+                    filtered.append(item)
                 return filtered
 
             except Exception as exc:
@@ -273,6 +289,7 @@ def main() -> None:
         return
 
     fresh = []
+    seen_models = {}  # model_key -> count, cap same model at 2
     for item in raw:
         if len(fresh) >= MAX_CARS:
             break
@@ -280,6 +297,10 @@ def main() -> None:
         if not car_id:
             continue
         entry = build_car_entry(item, len(fresh) + 1, rate)
+        model_key = f"{entry['brand']}_{entry['model'].split('(')[0].strip()}"
+        if seen_models.get(model_key, 0) >= 2:
+            continue
+        seen_models[model_key] = seen_models.get(model_key, 0) + 1
         fresh.append(entry)
         print(f"  [NEW]  {entry['brand']} {entry['model']} — {entry['price']}")
 
