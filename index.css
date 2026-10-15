@@ -1534,6 +1534,13 @@
   }
   .cost-row--total .cost-name { color: rgba(255,255,255,0.8); font-weight: 600; }
   .cost-row--total .cost-val { color: var(--lime); font-size: 0.95rem; }
+  .costs-freight-note {
+    font-size: 0.7rem;
+    color: var(--gray-light);
+    font-style: italic;
+    padding: 0.6rem 1.4rem 0;
+    line-height: 1.5;
+  }
   .costs-calc-btn {
     display: block;
     text-align: center;
