@@ -2,81 +2,97 @@
   {
     "id": 1,
     "brand": "Kia",
-    "model": "EV6 Long Range (2022)",
-    "price": "25 250 €",
-    "image": "https://ci.encar.com/carpicture03/pic4223/42237736_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42240916"
+    "model": "Sorento 디젤 2.0 4WD (2017)",
+    "price": "16 030 €",
+    "image": "https://ci.encar.com/carpicture03/pic4263/42639281_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42639883"
   },
   {
     "id": 2,
-    "brand": "Hyundai",
-    "model": "Tucson NX4 Diesel 2.0 4WD (2022)",
-    "price": "18 370 €",
-    "image": "https://ci.encar.com/carpicture03/pic4193/41930792_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/41935305"
+    "brand": "Kia",
+    "model": "Sorento 디젤 2.0 4WD (2017)",
+    "price": "16 030 €",
+    "image": "https://ci.encar.com/carpicture03/pic4263/42639281_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42639281"
   },
   {
     "id": 3,
     "brand": "Hyundai",
-    "model": "Tucson NX4 Diesel 2.0 4WD (2022)",
-    "price": "18 600 €",
-    "image": "https://ci.encar.com/carpicture03/pic4193/41930778_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/41933930"
+    "model": "Sonata 2.0 (2023)",
+    "price": "26 610 €",
+    "image": "https://ci.encar.com/carpicture05/pic4235/42355656_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42371200"
   },
   {
     "id": 4,
-    "brand": "Hyundai",
-    "model": "Palisade Diesel 2.2 2WD (2024)",
-    "price": "33 310 €",
-    "image": "https://ci.encar.com/carpicture05/pic4225/42254935_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42271590"
+    "brand": "쉐보레(GM대우)",
+    "model": "Ray 1.3 터보 2WD (2022)",
+    "price": "19 610 €",
+    "image": "https://ci.encar.com/carpicture10/pic4250/42505173_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42511770"
   },
   {
     "id": 5,
     "brand": "Kia",
-    "model": "Sorento HEV 1.6 2WD (2025)",
-    "price": "33 690 €",
-    "image": "https://ci.encar.com/carpicture09/pic4219/42195569_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42197567"
+    "model": "Sportage LPG 2.0 2WD (2022)",
+    "price": "31 860 €",
+    "image": "https://ci.encar.com/carpicture04/pic4224/42243757_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42248443"
   },
   {
     "id": 6,
-    "brand": "Kia",
-    "model": "Seltos Gasoline 1.6 Turbo 2WD (2019)",
-    "price": "16 130 €",
-    "image": "https://ci.encar.com/carpicture06/pic4216/42167993_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42177430"
+    "brand": "Hyundai",
+    "model": "Sonata 2.0 (2022)",
+    "price": "16 980 €",
+    "image": "https://ci.encar.com/carpicture03/pic4213/42131432_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42138454"
   },
   {
     "id": 7,
     "brand": "Hyundai",
-    "model": "Palisade Diesel 2.2 2WD (2022)",
-    "price": "20 610 €",
-    "image": "https://ci.encar.com/carpicture06/pic4216/42165390_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42165415"
+    "model": "Sonata 2.0 (2023)",
+    "price": "26 610 €",
+    "image": "https://ci.encar.com/carpicture09/pic4249/42497476_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42504863"
   },
   {
     "id": 8,
-    "brand": "Genesis",
-    "model": "GV80 3.5T Gasoline AWD (2023)",
-    "price": "41 530 €",
-    "image": "https://ci.encar.com/carpicture05/pic4215/42153245_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42162774"
+    "brand": "Kia",
+    "model": "K5 2.0 (2024)",
+    "price": "24 860 €",
+    "image": "https://ci.encar.com/carpicture02/pic4192/41927118_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/41936956"
   },
   {
     "id": 9,
-    "brand": "Kia",
-    "model": "Mohave Diesel 3.0 4WD (2016)",
-    "price": "15 390 €",
-    "image": "https://ci.encar.com/carpicture08/pic4178/41783499_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/41795410"
+    "brand": "Hyundai",
+    "model": "Sonata 2.0 (2023)",
+    "price": "26 610 €",
+    "image": "https://ci.encar.com/carpicture09/pic4249/42497474_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42501771"
   },
   {
     "id": 10,
-    "brand": "Kia",
-    "model": "K9 3.3 GDI AWD (2021)",
-    "price": "23 900 €",
-    "image": "https://ci.encar.com/carpicture01/pic4201/42015536_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42016029"
+    "brand": "Hyundai",
+    "model": "Sonata 2.0 (2021)",
+    "price": "19 610 €",
+    "image": "https://ci.encar.com/carpicture03/pic4233/42332898_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42343428"
+  },
+  {
+    "id": 11,
+    "brand": "르노코리아(삼성)",
+    "model": "마스터 어린이 보호차 (2019)",
+    "price": "25 730 €",
+    "image": "https://ci.encar.com/carpicture01/pic4241/42416499_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42420699"
+  },
+  {
+    "id": 12,
+    "brand": "Hyundai",
+    "model": "Sonata 2.0 (2023)",
+    "price": "23 980 €",
+    "image": "https://ci.encar.com/carpicture05/pic4265/42652152_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42653494"
   }
 ]
