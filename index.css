@@ -426,15 +426,12 @@
   /* ---- MERGED SERVICES + PARTNER SECTION ---- */
   .services-section {
     background: var(--off-white);
-    padding: 6rem 2rem;
   }
 
   .svcp-layout {
-    max-width: 1100px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
     direction: rtl;
   }
