@@ -6,6 +6,7 @@
       'nav.menu':        'Меню',
       'nav.calculator':  'Калкулатор',
       'nav.about':       'За нас',
+      'nav.help':        'Помощ',
       'nav.inquiry':     'Запитване',
       /* ── footer ── */
       'footer.home':      'Начало',
@@ -255,6 +256,7 @@
       'nav.menu':        'Menu',
       'nav.calculator':  'Calculator',
       'nav.about':       'About',
+      'nav.help':        'Help',
       'nav.inquiry':     'Inquiry',
       /* ── footer ── */
       'footer.home':      'Home',
