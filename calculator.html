@@ -65,19 +65,19 @@
                 <input type="checkbox" id="s-homologation">
                 <span class="stoggle-box"></span>
                 <span data-i18n="calc.homologation">Хомологация / Технотест</span>
-                <span class="stoggle-price">+307 €</span>
+                <span class="stoggle-price">+306 €</span>
               </label>
               <label class="stoggle">
                 <input type="checkbox" id="s-gas">
                 <span class="stoggle-box"></span>
                 <span data-i18n="calc.gas">Газова уредба</span>
-                <span class="stoggle-price">+153 €</span>
+                <span class="stoggle-price">+155 €</span>
               </label>
               <label class="stoggle">
                 <input type="checkbox" id="s-sofia">
                 <span class="stoggle-box"></span>
                 <span data-i18n="calc.sofia">Транспорт до София/Пловдив</span>
-                <span class="stoggle-price">+300 €</span>
+                <span class="stoggle-price">+250 €</span>
               </label>
             </div>
           </div>
@@ -92,7 +92,7 @@
 
             <div class="sr-breakdown">
               <div class="sr-row"><span data-i18n="calc.sr.car">Цена на колата (в EUR)</span><span id="sr-car">-</span></div>
-              <div class="sr-row"><span data-i18n="calc.sr.transport">Транспорт &amp; логистика</span><span>~1 680 €</span></div>
+              <div class="sr-row"><span data-i18n="calc.sr.transport">Транспорт &amp; логистика</span><span>~1 500 €</span></div>
               <div class="sr-row sr-tax"><span data-i18n="calc.sr.taxes">Мито + ДДС</span><span id="sr-taxes">-</span></div>
               <div class="sr-row" id="sr-extras-row" style="display:none"><span data-i18n="calc.sr.extras">Допълнителни</span><span id="sr-extras">-</span></div>
             </div>
@@ -134,7 +134,7 @@ if (navToggle && navLinks) {
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 }
 
-const FIXED_EUR = 250 + 1400 + 30 + 100 + 92 + 92 + 435;
+const FIXED_EUR = 250 + 1500 + 30 + 100 + 92 + 92 + 435;
 let krwPerEur = null;
 
 function fmtKrw(n) { return n.toLocaleString('ko-KR') + ' ₩'; }
@@ -154,9 +154,9 @@ function sliderUpdate(krwPrice) {
   const taxes = duty + vat;
 
   let extras = 0;
-  if (document.getElementById('s-homologation').checked) extras += 307;
-  if (document.getElementById('s-gas').checked) extras += 153;
-  if (document.getElementById('s-sofia').checked) extras += 300;
+  if (document.getElementById('s-homologation').checked) extras += 306;
+  if (document.getElementById('s-gas').checked) extras += 155;
+  if (document.getElementById('s-sofia').checked) extras += 250;
 
   const total = taxBase * 1.32 + customs + unloading + commission + extras;
 
