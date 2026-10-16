@@ -170,8 +170,8 @@
   .hero-right .hero-actions { justify-content: flex-end; }
   .hero-right .btn-lime { background: #e62106; color: #ffffff; }
   .hero-right .btn-lime:hover { background: #c41a05; color: #ffffff; }
-  .hero-actions .btn-lime-outline { color: #ffffff !important; border-color: var(--lime); }
-  .hero-actions .btn-lime-outline:hover { background: rgba(126,211,33,0.15); color: #ffffff !important; }
+  .hero-actions .btn-lime-outline { color: rgba(255,255,255,0.55) !important; border-color: rgba(255,255,255,0.35); }
+  .hero-actions .btn-lime-outline:hover { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8) !important; border-color: rgba(255,255,255,0.6); }
   .hero-right .btn-ghost-white { border-color: rgba(255,255,255,0.25); }
   .hero-right .btn-ghost-white:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
   .hero-right .stat-num { color: #e62106; }
