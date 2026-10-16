@@ -170,8 +170,8 @@
   .hero-right .hero-actions { justify-content: flex-end; }
   .hero-right .btn-lime { background: #e62106; color: #ffffff; }
   .hero-right .btn-lime:hover { background: #c41a05; color: #ffffff; }
-  .hero-left .btn-lime-outline { color: var(--lime); border-color: var(--lime); }
-  .hero-left .btn-lime-outline:hover { background: rgba(126,211,33,0.12); color: var(--lime); }
+  .hero-left .btn-lime-outline { color: #ffffff; border-color: var(--lime); }
+  .hero-left .btn-lime-outline:hover { background: rgba(126,211,33,0.15); color: #ffffff; }
   .hero-right .btn-ghost-white { border-color: rgba(255,255,255,0.25); }
   .hero-right .btn-ghost-white:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
   .hero-right .stat-num { color: #e62106; }
