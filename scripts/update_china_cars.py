@@ -163,7 +163,7 @@ def parse_card(card_text: str, card_href: str, card_img: str, brand_name: str) -
     }
 
 
-def scrape_brand(page, brand_name: str, brand_slug: str, known_urls: set, slots: int) -> list:
+def scrape_brand(page, brand_name: str, brand_slug: str, known_urls: set) -> list:
     url = f"{BASE_URL}/usedcar/brandName={brand_slug}"
     print(f"  Opening {url}...")
 
@@ -190,8 +190,6 @@ def scrape_brand(page, brand_name: str, brand_slug: str, known_urls: set, slots:
     print(f"  Found {len(cards)} listing(s) for {brand_name}")
     added = []
     for card in cards:
-        if len(added) >= slots:
-            break
         if card["href"] in known_urls:
             continue
         entry = parse_card(card["text"], card["href"], card["img"], brand_name)
@@ -234,11 +232,8 @@ def main() -> None:
         page.add_init_script(STEALTH_SCRIPT)
 
         for brand_name, brand_slug in BRANDS:
-            if len(all_new) >= MAX_CARS:
-                break
-            remaining = MAX_CARS - len(all_new)
             print(f"\n[{brand_name}]")
-            new_entries = scrape_brand(page, brand_name, brand_slug, known_urls, remaining)
+            new_entries = scrape_brand(page, brand_name, brand_slug, known_urls)
             all_new.extend(new_entries)
             if new_entries:
                 time.sleep(1.5)
@@ -260,7 +255,7 @@ def main() -> None:
             continue
         entry["price"] = format_price(eur)
         converted.append(entry)
-    all_new = converted
+    all_new = converted[:MAX_CARS]
 
     real_count = len(all_new)
     remaining_placeholders = placeholders[:max(0, MAX_CARS - real_count)]

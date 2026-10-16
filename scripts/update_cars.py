@@ -21,7 +21,7 @@ SEARCH_CONFIG = {
     "max_price_man": 8000,   # 만원 → ~44 000 €
     "max_mileage":   150000,
     "min_year":      2015,
-    "fetch_count":   60,
+    "fetch_count":   120,
 }
 
 # Korean model group names to skip (vans, buses, micro cars)
