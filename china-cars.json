@@ -1,50 +1,66 @@
 [
   {
     "brand": "BYD",
-    "model": "Qin Plus (2021)",
-    "image": "https://m.tichetech.com/used/6/18595896/7a7d39230774cc5892ec33cb3a747ecb894fae897a126390d0a85b60a2432f11_e7x.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Qin-Plus-ACU91112137",
-    "price": "9 640 €",
+    "model": "Song Plus New Energy (2023)",
+    "image": "https://m.tichetech.com/used/6/18601638/81b97a4e77ec8bcc9d82585fe9bb83a0ca7db7911cb212b84a4d0b3a90750367_ZTe.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-Plus-New-Energy-ACU91112032",
+    "price": "14 470 €",
     "id": 1
   },
   {
     "brand": "BYD",
-    "model": "Seal06 (2025)",
-    "image": "https://m.tichetech.com/used/6/18593083/20707ab0bd7eea6049d16393f4dadc0ea04207b6774f91dbe64ba910a0cfe735_UIP.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Seal06-ACU91112190",
-    "price": "14 470 €",
+    "model": "Dolphin BEV 44.928KWH 420km (2023)",
+    "image": "https://m.tichetech.com/used/6/18597477/766ee95c2ce0888998daa1d175e4ae7100e62d55f838130484747424c139536b_bxB.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Dolphin-ACU91112115",
+    "price": "13 080 €",
     "id": 2
   },
   {
     "brand": "BYD",
-    "model": "Yuan Plus BEV 60.48KWH 510km (2022)",
-    "image": "https://m.tichetech.com/used/6/18582341/77937a9ce449286452cd2d200e8a13f1b633dbab183ec677ed1a2500bd067192_2Ge.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Yuan-Plus-ACU91114506",
-    "price": "12 730 €",
+    "model": "Song Pro New Energy (2023)",
+    "image": "https://m.tichetech.com/used/6/18581209/503c5cbafea1680a01562f11c501725dceb0528ab2ac1784021a144be371e32d_gIl.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-Pro-New-Energy-ACU91115323",
+    "price": "13 950 €",
     "id": 3
   },
   {
     "brand": "BYD",
-    "model": "Song Pro (2021)",
-    "image": "https://m.tichetech.com/used/6/18589611/891131dac9ad89eb37c1e2c9997f929b619699d4e2bcc6246b6508bc25f9b9fe_TIN.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-Pro-ACU91111810",
-    "price": "8 750 €",
+    "model": "Seagull BEV 30.08KWH 305km (2024)",
+    "image": "https://m.tichetech.com/used/6/18604749/a3981563b4c3ba7214e96369e87edbe787aa13cc6fd16dbb5d81575170d33644_IjH.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Seagull-ACU91114610",
+    "price": "10 990 €",
     "id": 4
   },
   {
     "brand": "BYD",
-    "model": "Song (2020)",
-    "image": "https://m.tichetech.com/used/6/18576148/439fc1b5cd4a5fabde2340698fb14e0bc6a460a01f8a39b513678591523d6e83_bXz.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-ACU91115322",
-    "price": "8 730 €",
+    "model": "YuanUP BEV 45.12KWH 401km (2024)",
+    "image": "https://m.tichetech.com/used/6/18571793/8166f013ee90f58df722f1c837a02f70be843c665b6ef311bc45afbc5723c78c_wfz.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-YuanUP-ACU91114550",
+    "price": "14 300 €",
     "id": 5
   },
   {
     "brand": "BYD",
-    "model": "Qin Plus (2021)",
-    "image": "https://m.tichetech.com/used/6/18603561/4f7b34301fba92607b607238a620af62ec3659258da84dc03ec7e34370aed7dd_TuA.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Qin-Plus-ACU91114485",
-    "price": "10 470 €",
+    "model": "Song Plus New Energy (2021)",
+    "image": "https://m.tichetech.com/used/6/18578613/87775e92aa1f834cbd4fb46a818097de22035deea19b9313a280d8eb4476e4d1_lKx.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-Plus-New-Energy-ACU91114524",
+    "price": "13 260 €",
     "id": 6
+  },
+  {
+    "brand": "BYD",
+    "model": "Destroyer 05 (2023)",
+    "image": "https://m.tichetech.com/used/6/18598256/57c7771376f9da193133f28b383dd42c3a9c447cdcfd26640aa0eda0e1937aec_Cd8.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Destroyer-05-ACU91112079",
+    "price": "12 420 €",
+    "id": 7
+  },
+  {
+    "brand": "BYD",
+    "model": "Song Pro New Energy (2023)",
+    "image": "https://m.tichetech.com/used/6/18595975/6eb891df651b84759227ad8d51e56014ff707194a27e36ffbb7c41b83c445f0f_cyS.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-Pro-New-Energy-ACU91112141",
+    "price": "13 120 €",
+    "id": 8
   }
 ]
