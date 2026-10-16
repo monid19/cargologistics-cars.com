@@ -390,6 +390,20 @@
   }
   
   .how-intro p { font-size: 0.92rem; color: var(--gray-mid); line-height: 1.8; margin-top: 1rem; font-weight: 400; }
+  .how-cta-btn {
+    display: inline-block;
+    margin-top: 1.8rem;
+    background: var(--lime);
+    color: var(--green-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .how-cta-btn:hover { background: var(--lime-bright); transform: translateY(-2px); }
   
   .steps { display: flex; flex-direction: column; }
   
