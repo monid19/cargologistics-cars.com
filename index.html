@@ -255,25 +255,17 @@
 
       <div class="delivered-photos fade-up">
         <div class="delivered-title" data-i18n="costs.delivered.title">Доставени автомобили до България</div>
-        <div class="delivered-grid" id="delivered-grid">
-          <div class="delivered-photo" style="background-image:url('delivered1.jpg')"></div>
-          <div class="delivered-photo" style="background-image:url('delivered2.jpg')"></div>
-          <div class="delivered-photo" style="background-image:url('delivered3.jpg')"></div>
-          <div class="delivered-photo" style="background-image:url('review-car-1.jpg')"></div>
-          <div class="delivered-photo" style="background-image:url('review-car-2.jpg')"></div>
-          <div class="delivered-photo" style="background-image:url('review-car-3.jpg')"></div>
-          <div class="delivered-photo" style="background-image:url('review-car-4.jpg')"></div>
-          <div class="delivered-photo" style="background-image:url('review-car-5.jpg')"></div>
-        </div>
-        <div class="delivered-dots" id="delivered-dots">
-          <span class="delivered-dot active"></span>
-          <span class="delivered-dot"></span>
-          <span class="delivered-dot"></span>
-          <span class="delivered-dot"></span>
-          <span class="delivered-dot"></span>
-          <span class="delivered-dot"></span>
-          <span class="delivered-dot"></span>
-          <span class="delivered-dot"></span>
+        <div class="delivered-carousel-wrap">
+          <div class="delivered-track" id="delivered-track">
+            <div class="delivered-photo" style="background-image:url('delivered1.jpg')"></div>
+            <div class="delivered-photo" style="background-image:url('delivered2.jpg')"></div>
+            <div class="delivered-photo" style="background-image:url('delivered3.jpg')"></div>
+            <div class="delivered-photo" style="background-image:url('review-car-1.jpg')"></div>
+            <div class="delivered-photo" style="background-image:url('review-car-2.jpg')"></div>
+            <div class="delivered-photo" style="background-image:url('review-car-3.jpg')"></div>
+            <div class="delivered-photo" style="background-image:url('review-car-4.jpg')"></div>
+            <div class="delivered-photo" style="background-image:url('review-car-5.jpg')"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -584,21 +576,30 @@ if (tsPrev && tsNext) {
 document.addEventListener('langchange', () => { tsIdx = 0; renderReview(); });
 renderReview();
 
-// Delivered photos mobile slideshow
+// Delivered photos carousel
 (function() {
-  const photos = document.querySelectorAll('#delivered-grid .delivered-photo');
-  const dots   = document.querySelectorAll('#delivered-dots .delivered-dot');
-  if (!photos.length) return;
-  let current = 0;
-  function goTo(n) {
-    photos[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (n + photos.length) % photos.length;
-    photos[current].classList.add('active');
-    dots[current].classList.add('active');
+  const track = document.getElementById('delivered-track');
+  if (!track) return;
+  const photos = Array.from(track.children);
+  const VISIBLE = 5;
+  // Clone first VISIBLE photos and append for seamless loop
+  photos.slice(0, VISIBLE).forEach(p => track.appendChild(p.cloneNode(true)));
+  const itemW = () => track.children[0].offsetWidth + 16; // width + gap
+  let idx = 0;
+  function advance() {
+    idx++;
+    track.style.transition = 'transform 0.6s ease';
+    track.style.transform = `translateX(-${idx * itemW()}px)`;
+    // When we've scrolled through all originals, snap back silently
+    if (idx >= photos.length) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(0)';
+        idx = 0;
+      }, 650);
+    }
   }
-  goTo(0);
-  setInterval(() => goTo(current + 1), 3000);
+  setInterval(advance, 3000);
 })();
 
 // Contact form AJAX

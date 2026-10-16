@@ -1737,27 +1737,25 @@
     color: var(--green-accent);
     margin-bottom: 1.2rem;
   }
-  .delivered-grid {
-    position: relative;
-    max-width: 900px;
+  .delivered-carousel-wrap {
+    overflow: hidden;
+    max-width: 1100px;
     margin: 0 auto;
-    aspect-ratio: 4/3;
   }
-  .delivered-dots { display: flex; justify-content: center; gap: 6px; margin-top: 0.8rem; }
-  .delivered-dot { width: 7px; height: 7px; border-radius: 50%; background: #c8dfc8; transition: background 0.3s; }
-  .delivered-dot.active { background: var(--green-brand); }
+  .delivered-track {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.6s ease;
+  }
   .delivered-photo {
-    position: absolute;
-    inset: 0;
+    flex: 0 0 calc((100% - 4rem) / 5);
+    aspect-ratio: 4/3;
     border-radius: 8px;
     background-color: #d4e8d4;
     background-size: cover;
     background-position: center;
     border: 1px solid #ddeedd;
-    opacity: 0;
-    transition: opacity 0.6s ease;
   }
-  .delivered-photo.active { opacity: 1; }
 
 
   /* ANIMATIONS */
