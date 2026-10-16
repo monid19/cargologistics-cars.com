@@ -588,7 +588,7 @@ renderReview();
 (function() {
   const photos = document.querySelectorAll('#delivered-grid .delivered-photo');
   const dots   = document.querySelectorAll('#delivered-dots .delivered-dot');
-  if (!photos.length || window.innerWidth >= 640) return;
+  if (!photos.length) return;
   let current = 0;
   function goTo(n) {
     photos[current].classList.remove('active');
