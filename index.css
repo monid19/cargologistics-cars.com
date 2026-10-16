@@ -1834,7 +1834,8 @@
     .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
     .stat-item { border-right: none; margin-right: 0; padding-right: 0; }
     .testimonial-slider { grid-template-columns: 1fr; }
-    .ts-right { display: none; }
+    .ts-right { display: block; min-height: 200px; order: -1; }
+    .ts-left { order: 1; }
     .blog-grid { grid-template-columns: 1fr; }
     .costs-section { padding: 5rem 1.5rem; }
     .costs-layout { grid-template-columns: 1fr; }
