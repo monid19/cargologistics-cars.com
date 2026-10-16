@@ -24,6 +24,7 @@ import requests
 # CONFIGURATION
 # ---------------------------------------------------------------------------
 MAX_CARS = 8
+MAX_IMPORT_EUR = 15_000   # cap displayed price
 
 # (display name, autocango brandName URL param)
 BRANDS = [
@@ -250,10 +251,16 @@ def main() -> None:
         print("\nNo results scraped — keeping existing china-cars.json unchanged.")
         return
 
-    # Convert prices
+    # Convert prices and apply cap
+    converted = []
     for entry in all_new:
         fob_usd = entry.pop("fob_usd")
-        entry["price"] = format_price(calc_import_price(fob_usd, USD_PER_EUR))
+        eur = calc_import_price(fob_usd, USD_PER_EUR)
+        if eur > MAX_IMPORT_EUR:
+            continue
+        entry["price"] = format_price(eur)
+        converted.append(entry)
+    all_new = converted
 
     real_count = len(all_new)
     remaining_placeholders = placeholders[:max(0, MAX_CARS - real_count)]

@@ -14,6 +14,7 @@ import requests
 # CONFIGURATION
 # ---------------------------------------------------------------------------
 MAX_CARS = 12
+MAX_TURNKEY_EUR = 15_000   # cap displayed price
 
 SEARCH_CONFIG = {
     "min_price_man": 1000,   # 만원 → ~5 500 € (excludes micro/cheap cars)
@@ -297,6 +298,9 @@ def main() -> None:
         if not car_id:
             continue
         entry = build_car_entry(item, len(fresh) + 1, rate)
+        turnkey_raw = calc_turnkey(item.get("Price", 0) * 10_000, rate)
+        if turnkey_raw > MAX_TURNKEY_EUR:
+            continue
         model_key = f"{entry['brand']}_{entry['model'].split('(')[0].strip()}"
         if seen_models.get(model_key, 0) >= 2:
             continue
