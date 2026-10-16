@@ -54,7 +54,7 @@
       'how.s2.desc':     'Препратете URL адреса или телефона на продавача. Поемаме цялата комуникация и проверка на автомобила на място в Корея.',
       'how.s3.title':    'Ние се грижим за всичко останало',
       'how.s3.desc':     'Закупуване, контейнер, товарене и укрепване в контейнер, морски транспорт, митница, разтоварване и пълен комплект документи за регистрация в КАТ.',
-      'how.cta':         'Получи оферта',
+      'how.cta':         'Често задавани въпроси',
       /* ── services ── */
       'services.tag':   'Услуги',
       'services.title': 'Какво включва услугата?',
@@ -305,7 +305,7 @@
       'how.s2.desc':     'Forward the URL or the seller\'s contact. We handle all communication and on-site vehicle inspection in Korea.',
       'how.s3.title':    'We take care of everything else',
       'how.s3.desc':     'Purchase, container, loading and securing, sea freight, customs clearance, unloading and a full set of registration documents.',
-      'how.cta':         'Get a quote',
+      'how.cta':         'Frequently Asked Questions',
       /* ── services ── */
       'services.tag':   'Services',
       'services.title': 'What does the service include?',
