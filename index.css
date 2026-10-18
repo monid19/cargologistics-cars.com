@@ -484,6 +484,7 @@
     display: block;
   }
   .svcp-danny {
+    margin-top: auto;
     display: flex;
     align-items: center;
     gap: 0;
