@@ -442,6 +442,7 @@
   /* ---- MERGED SERVICES + PARTNER SECTION ---- */
   .services-section {
     background: var(--white);
+    padding-top: 3rem;
   }
 
   .svcp-layout {

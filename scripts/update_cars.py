@@ -14,7 +14,7 @@ import requests
 # CONFIGURATION
 # ---------------------------------------------------------------------------
 MAX_CARS = 12
-MAX_TURNKEY_EUR = 15_000   # cap displayed price
+MAX_TURNKEY_EUR = 17_000   # cap displayed price
 
 SEARCH_CONFIG = {
     "min_price_man": 1000,   # 만원 → ~5 500 € (excludes micro/cheap cars)
