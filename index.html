@@ -593,7 +593,10 @@ renderReview();
   const VISIBLE = 5;
   // Clone first VISIBLE photos and append for seamless loop
   photos.slice(0, VISIBLE).forEach(p => track.appendChild(p.cloneNode(true)));
-  const itemW = () => track.children[0].offsetWidth + 16; // width + gap
+  const itemW = () => {
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return track.children[0].offsetWidth + gap;
+  };
   let idx = 0;
   function advance() {
     idx++;

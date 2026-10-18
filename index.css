@@ -1800,6 +1800,10 @@
   }
 
   @media (max-width: 960px) {
+    .delivered-photo { flex: 0 0 100%; }
+    .delivered-track { gap: 0; }
+    .delivered-carousel-wrap { padding: 0 1rem; }
+
     .cars-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
     nav { padding: 0 1.5rem; }
     .nav-toggle { display: flex; }
