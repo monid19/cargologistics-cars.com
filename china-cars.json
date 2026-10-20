@@ -1,66 +1,66 @@
 [
   {
     "brand": "BYD",
-    "model": "QinL (2024)",
-    "image": "https://m.tichetech.com/used/6/18505509/d1c2cf2dec6d6d4712d3c1f1547e823b5923f065872298cebf10f7bb0f912193_hpO.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-QinL-ACU91128746",
-    "price": "13 800 €",
+    "model": "Yuan Plus BEV 60.48KWH 510km (2022)",
+    "image": "https://m.tichetech.com/used/6/18726491/605ab953b49530de993332c0ced567bafa876fde46666c223df07beb36a6b7a2_l9Q.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Yuan-Plus-ACU91134183",
+    "price": "13 780 €",
     "id": 1
   },
   {
     "brand": "BYD",
     "model": "Seagull BEV 30.08KWH 305km (2025)",
-    "image": "https://m.tichetech.com/used/6/18698374/bfc93db642bdab3ae0bd8b5376e4cf12b232f6ede90dbfdb1cdcae8a9b1d16d1_mT8.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Seagull-ACU91128665",
-    "price": "10 640 €",
+    "image": "https://m.tichetech.com/used/6/18732533/3a5ede8a4428a978dd118d6b2976102874f009a0f0e46992fb7beed85b78c227_HO5.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Seagull-ACU91134073",
+    "price": "12 040 €",
     "id": 2
   },
   {
     "brand": "BYD",
-    "model": "Song Pro New Energy (2025)",
-    "image": "https://m.tichetech.com/used/6/18690853/dd4429f136b2e28671ee426283d428c0f5671ae083f4a0a8ac761f22940804e3_QYN.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-Pro-New-Energy-ACU91128764",
-    "price": "14 640 €",
+    "model": "Dolphin BEV 44.928KWH 420km (2025)",
+    "image": "https://m.tichetech.com/used/6/18729897/f2f028bb93e90ca4e794a16f2d113c11b5c767e9784c67e5bf15d82e81f37bbd_76m.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Dolphin-ACU91134171",
+    "price": "13 640 €",
     "id": 3
   },
   {
     "brand": "BYD",
-    "model": "Qin Plus (2024)",
-    "image": "https://m.tichetech.com/used/6/18701444/a2eaf5b01920d9c421c22fdf9909b08eefb33f29bab50f4835d6ab86f5575b56_z5u.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Qin-Plus-ACU91130938",
-    "price": "11 160 €",
+    "model": "Song Pro (2021)",
+    "image": "https://m.tichetech.com/used/6/18708335/0f06196b81b170eb99a562997133e253279da841aafcdd048bbede43fd9eed34_mzZ.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Song-Pro-ACU91133815",
+    "price": "9 950 €",
     "id": 4
   },
   {
     "brand": "BYD",
-    "model": "Qin Plus (2025)",
-    "image": "https://m.tichetech.com/used/6/18697832/4e118990f7e2b32999ac448eb972293f72cbd4994e62005b333755b1dd971df7_Ei5.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Qin-Plus-ACU91128620",
-    "price": "11 530 €",
+    "model": "Qin Plus (2023)",
+    "image": "https://m.tichetech.com/used/6/18733119/c41c8f520621c5595db4ed1744f36e7181cdfb62ce005eb0b487c30da489a0da_0ot.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Qin-Plus-ACU91134082",
+    "price": "11 900 €",
     "id": 5
   },
   {
-    "brand": "Chery",
-    "model": "Arrizo 8 (2022)",
-    "image": "https://m.tichetech.com/used/6/18691259/07a801fb2f552b360d7a55f36d9feac0ec8546352b923bbd12d0da5c8e9e38ad_lk4.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-Chery-Arrizo-8-ACU91126440",
-    "price": "12 550 €",
+    "brand": "BYD",
+    "model": "Han BEV 76.9KWH (2020)",
+    "image": "https://m.tichetech.com/used/6/18739646/45f6142b66248b8452b3255f88716bd9c38ace639590c226b9ca93faa7d3a622_cSj.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Han-ACU91136607",
+    "price": "13 080 €",
     "id": 6
   },
   {
-    "brand": "Chery",
-    "model": "Tiggo 8 (2025)",
-    "image": "https://m.tichetech.com/used/6/18688167/21099f0703167452c69cbe747984d788fc4893dc03a9c4ed8fc3cd7fe151b45f_ob5.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-Chery-Tiggo-8-ACU91126430",
-    "price": "14 330 €",
+    "brand": "BYD",
+    "model": "QinL (2024)",
+    "image": "https://m.tichetech.com/used/6/18738497/bab2e9c6a3676497407d13c2bdd559c9f6d805b8f7a7e35a773495c066717d0f_idE.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-QinL-ACU91136424",
+    "price": "11 980 €",
     "id": 7
   },
   {
-    "brand": "Chery",
-    "model": "Tiggo 8 (2025)",
-    "image": "https://m.tichetech.com/used/6/18687663/110da54a5f4fae7640e797e79f38f639831ea1eec803d125f975ed9b9381caf0_Fcf.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
-    "sourceUrl": "https://www.autocango.com/sku/usedcar-Chery-Tiggo-8-ACU91126427",
-    "price": "13 420 €",
+    "brand": "BYD",
+    "model": "Dolphin BEV 44.9KWH (2021)",
+    "image": "https://m.tichetech.com/used/6/18731145/e12dea4df2f324311332dd5255ded19383aaafd7d25aa5c36db7f07eab3445bf_cmt.webp/t?imageMogr2/thumbnail/!280x210r/gravity/center/crop/280x210/strip|imageSlim",
+    "sourceUrl": "https://www.autocango.com/sku/usedcar-BYD-Dolphin-ACU91134141",
+    "price": "11 720 €",
     "id": 8
   }
 ]
