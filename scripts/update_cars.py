@@ -120,7 +120,7 @@ def get_exchange_rate() -> float:
 
 def calc_turnkey(krw: int, krw_per_eur: float) -> int:
     car_eur  = (krw + WEBSITE_TAX_KRW) / krw_per_eur
-    tax_base = car_eur + 262.5 + 1500 + 30 + 150
+    tax_base = car_eur + 262.5 + 1450 + 30 + 150
     total    = tax_base * 1.32 + 650
     return round(total / 10) * 10
 

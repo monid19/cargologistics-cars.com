@@ -92,7 +92,7 @@
 
             <div class="sr-breakdown">
               <div class="sr-row"><span data-i18n="calc.sr.car">Цена на колата (в EUR)</span><span id="sr-car">-</span></div>
-              <div class="sr-row"><span data-i18n="calc.sr.transport">Транспорт &amp; логистика</span><span>~1 500 €</span></div>
+              <div class="sr-row"><span data-i18n="calc.sr.transport">Транспорт &amp; логистика</span><span>~1 450 €</span></div>
               <div class="sr-row sr-tax"><span data-i18n="calc.sr.taxes">Мито + ДДС</span><span id="sr-taxes">-</span></div>
               <div class="sr-row" id="sr-extras-row" style="display:none"><span data-i18n="calc.sr.extras">Допълнителни</span><span id="sr-extras">-</span></div>
             </div>
@@ -134,7 +134,7 @@ if (navToggle && navLinks) {
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 }
 
-const FIXED_EUR = 250 + 1500 + 30 + 100 + 92 + 92 + 435;
+const FIXED_EUR = 250 + 1450 + 30 + 100 + 92 + 92 + 435;
 let krwPerEur = null;
 
 function fmtKrw(n) { return n.toLocaleString('ko-KR') + ' ₩'; }
@@ -147,7 +147,7 @@ function sliderUpdate(krwPrice) {
   const carEur = krwPrice / krwPerEur;
   document.getElementById('scp-eur-equiv').textContent = '≈ ' + carEur.toLocaleString('bg-BG', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + ' EUR';
 
-  const loading = 262.5, transport = 1500, insurance = 30, port = 150, customs = 100, unloading = 100, commission = 450;
+  const loading = 262.5, transport = 1450, insurance = 30, port = 150, customs = 100, unloading = 100, commission = 450;
   const taxBase = carEur + loading + transport + insurance + port;
   const duty = taxBase * 0.10;
   const vat = taxBase * 1.10 * 0.20;

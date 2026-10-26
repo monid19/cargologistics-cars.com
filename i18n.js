@@ -508,7 +508,7 @@
       'faq.cat.3': 'Documents & Registration',
       'faq.cat.4': 'About the Service',
       'faq.q.1':  'How much does it cost to import a car from South Korea?',
-      'faq.a.1':  'The final price includes the car price in Korea, sea freight (~€1,680), customs duty, VAT, and our agency fee. For a car worth €10,000 the total costs are approximately <strong>€14,000–€15,500</strong> depending on model and volume. Use our <a href="/calculator">free calculator</a> for an estimate.',
+      'faq.a.1':  'The final price includes the car price in Korea, sea freight (~€1,450), customs duty, VAT, and our agency fee. For a car worth €10,000 the total costs are approximately <strong>€14,000–€15,500</strong> depending on model and volume. Use our <a href="/calculator">free calculator</a> for an estimate.',
       'faq.q.2':  "What is Cargo Logistics' agency fee?",
       'faq.a.2':  'The fee depends on the volume and complexity of the service. We provide a detailed breakdown of all costs before confirming the order — <strong>no hidden fees</strong>. <a href="/#contact">Contact us</a> for a free quote.',
       'faq.q.3':  'How long does delivery from Korea to Bulgaria take?',
