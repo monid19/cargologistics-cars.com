@@ -1,46 +1,22 @@
 [
   {
     "id": 1,
-    "brand": "Kia",
-    "model": "K5 2.0 LPI 렌터카용 (2019)",
-    "price": "14 060 €",
-    "image": "https://ci.encar.com/carpicture08/pic4158/41585058_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/41589888"
+    "brand": "Hyundai",
+    "model": "Sonata LPI 스타일 (2019)",
+    "price": "12 990 €",
+    "image": "https://ci.encar.com/carpicture08/pic4268/42687062_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42688794"
   },
   {
     "id": 2,
-    "brand": "Hyundai",
-    "model": "제네시스 DH G330 프리미엄 AWD (2016)",
-    "price": "13 710 €",
-    "image": "https://ci.encar.com/carpicture03/pic4193/41936703_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/41937162"
+    "brand": "Kia",
+    "model": "K7 2.5 GDI 노블레스 (2019)",
+    "price": "16 370 €",
+    "image": "https://ci.encar.com/carpicture05/pic4265/42659578_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42659765"
   },
   {
     "id": 3,
-    "brand": "Hyundai",
-    "model": "Grandeur 2.4 프리미엄 (2017)",
-    "price": "14 590 €",
-    "image": "https://ci.encar.com/carpicture06/pic4166/41669584_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/41670533"
-  },
-  {
-    "id": 4,
-    "brand": "Hyundai",
-    "model": "Sonata 1.6 터보 (2021)",
-    "price": "16 720 €",
-    "image": "https://ci.encar.com/carpicture10/pic4270/42702766_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42703609"
-  },
-  {
-    "id": 5,
-    "brand": "Kia",
-    "model": "Carnival 11인승 디럭스 (2017)",
-    "price": "16 800 €",
-    "image": "https://ci.encar.com/carpicture07/pic4287/42872356_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42890406"
-  },
-  {
-    "id": 6,
     "brand": "Hyundai",
     "model": "Elantra 1.6 (2021)",
     "price": "14 950 €",
@@ -48,27 +24,75 @@
     "encarUrl": "https://fem.encar.com/cars/detail/41697784"
   },
   {
-    "id": 7,
+    "id": 4,
     "brand": "Hyundai",
     "model": "Casper 모던 (2022)",
-    "price": "12 820 €",
+    "price": "12 830 €",
     "image": "https://ci.encar.com/carpicture01/pic4211/42117328_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42118705"
   },
   {
-    "id": 8,
-    "brand": "Hyundai",
-    "model": "Kona 1.6 터보 2WD (2020)",
-    "price": "14 330 €",
-    "image": "https://ci.encar.com/carpicture06/pic4216/42166966_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42176107"
-  },
-  {
-    "id": 9,
+    "id": 5,
     "brand": "Kia",
     "model": "Ray 프레스티지 (2022)",
     "price": "16 540 €",
     "image": "https://ci.encar.com/carpicture07/pic4257/42571673_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
     "encarUrl": "https://fem.encar.com/cars/detail/42572234"
+  },
+  {
+    "id": 6,
+    "brand": "Hyundai",
+    "model": "Sonata 2.0 (2019)",
+    "price": "13 090 €",
+    "image": "https://ci.encar.com/carpicture02/pic4272/42721734_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42722503"
+  },
+  {
+    "id": 7,
+    "brand": "Kia",
+    "model": "쏘울 EV EV (2017)",
+    "price": "14 160 €",
+    "image": "https://ci.encar.com/carpicture07/pic4267/42674412_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42686004"
+  },
+  {
+    "id": 8,
+    "brand": "Hyundai",
+    "model": "Sonata 2.0 (2020)",
+    "price": "16 720 €",
+    "image": "https://ci.encar.com/carpicture06/pic4266/42663982_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42674264"
+  },
+  {
+    "id": 9,
+    "brand": "Kia",
+    "model": "Morning LPi 럭셔리 (2019)",
+    "price": "12 650 €",
+    "image": "https://ci.encar.com/carpicture05/pic4275/42751660_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42759753"
+  },
+  {
+    "id": 10,
+    "brand": "Kia",
+    "model": "K9 5.0 GDI 퀀텀 (2015)",
+    "price": "14 330 €",
+    "image": "https://ci.encar.com/carpicture04/pic4274/42741987_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42745915"
+  },
+  {
+    "id": 11,
+    "brand": "Kia",
+    "model": "Sorento 디젤 2.0 4WD (2014)",
+    "price": "13 450 €",
+    "image": "https://ci.encar.com/carpicture09/pic4189/41892648_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/41898604"
+  },
+  {
+    "id": 12,
+    "brand": "Kia",
+    "model": "Ray 프레스티지 (2023)",
+    "price": "15 480 €",
+    "image": "https://ci.encar.com/carpicture07/pic4297/42976395_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42983902"
   }
 ]
