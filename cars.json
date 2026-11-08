@@ -2,97 +2,97 @@
   {
     "id": 1,
     "brand": "Kia",
-    "model": "Ray 밴 (2022)",
-    "price": "13 590 €",
-    "image": "https://ci.encar.com/carpicture05/pic4265/42659042_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42664315"
+    "model": "Sportage 디젤 2.0 2WD 노블레스 (2016)",
+    "price": "13 970 €",
+    "image": "https://ci.encar.com/carpicture05/pic4305/43054649_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/43058020"
   },
   {
     "id": 2,
-    "brand": "Kia",
-    "model": "Ray 프레스티지 (2018)",
-    "price": "12 630 €",
-    "image": "https://ci.encar.com/carpicture07/pic4267/42673548_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42676685"
+    "brand": "Hyundai",
+    "model": "Casper 터보 밴 (2023)",
+    "price": "16 150 €",
+    "image": "https://ci.encar.com/carpicture07/pic4307/43078957_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/43086182"
   },
   {
     "id": 3,
-    "brand": "Kia",
-    "model": "Sportage 디젤 2.0 2WD (2019)",
-    "price": "14 990 €",
-    "image": "https://ci.encar.com/carpicture03/pic4273/42735087_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42738492"
+    "brand": "Hyundai",
+    "model": "제네시스 DH G330 프리미엄 (2016)",
+    "price": "13 620 €",
+    "image": "https://ci.encar.com/carpicture01/pic4301/43018044_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/43018052"
   },
   {
     "id": 4,
-    "brand": "Hyundai",
-    "model": "Tucson 디젤 2.0 2WD (2016)",
-    "price": "14 820 €",
-    "image": "https://ci.encar.com/carpicture01/pic4271/42711837_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42713069"
+    "brand": "Kia",
+    "model": "Morning 프레스티지 (2024)",
+    "price": "16 500 €",
+    "image": "https://ci.encar.com/carpicture04/pic4304/43048541_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/43049362"
   },
   {
     "id": 5,
     "brand": "Hyundai",
-    "model": "Elantra 1.6 GDI 밸류 플러스 (2017)",
-    "price": "12 630 €",
-    "image": "https://ci.encar.com/carpicture08/pic4268/42689830_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42701166"
+    "model": "Sonata 1.6 터보 (2021)",
+    "price": "14 410 €",
+    "image": "https://ci.encar.com/carpicture03/pic4303/43033239_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/43041298"
   },
   {
     "id": 6,
-    "brand": "Hyundai",
-    "model": "Sonata 2.0 모던 (2018)",
-    "price": "13 590 €",
-    "image": "https://ci.encar.com/carpicture02/pic4282/42827886_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42829313"
+    "brand": "Kia",
+    "model": "K3 1.6 (2022)",
+    "price": "13 540 €",
+    "image": "https://ci.encar.com/carpicture07/pic4307/43073617_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/43078758"
   },
   {
     "id": 7,
-    "brand": "Genesis",
-    "model": "G70 3.3T 스포츠 AWD (2017)",
-    "price": "16 300 €",
-    "image": "https://ci.encar.com/carpicture09/pic4269/42698303_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42709852"
+    "brand": "KG모빌리티(쌍용)",
+    "model": "뷰티풀 코란도 가솔린 1.5 2WD C5 (2021)",
+    "price": "15 630 €",
+    "image": "https://ci.encar.com/carpicture05/pic4305/43058027_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/43071058"
   },
   {
     "id": 8,
     "brand": "Kia",
-    "model": "K3 트렌디 (2019)",
-    "price": "12 540 €",
-    "image": "https://ci.encar.com/carpicture03/pic4213/42132576_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42145923"
+    "model": "K3 1.6 (2022)",
+    "price": "14 320 €",
+    "image": "https://ci.encar.com/carpicture03/pic4273/42731543_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42732393"
   },
   {
     "id": 9,
-    "brand": "Hyundai",
-    "model": "Sonata 2.0 스마트 초이스 (2018)",
-    "price": "15 600 €",
-    "image": "https://ci.encar.com/carpicture10/pic4200/42008366_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42014027"
+    "brand": "Kia",
+    "model": "Carnival 9인승 프레스티지 (2017)",
+    "price": "12 660 €",
+    "image": "https://ci.encar.com/carpicture04/pic4274/42745171_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42746321"
   },
   {
     "id": 10,
-    "brand": "Hyundai",
-    "model": "Grandeur 3.0 LPi 모던 (렌터카) (2017)",
-    "price": "13 770 €",
-    "image": "https://ci.encar.com/carpicture05/pic4275/42759694_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42760344"
+    "brand": "Kia",
+    "model": "Ray 럭셔리 (2018)",
+    "price": "12 410 €",
+    "image": "https://ci.encar.com/carpicture09/pic4299/42992216_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42996868"
   },
   {
     "id": 11,
     "brand": "Hyundai",
-    "model": "Tucson 디젤 2.0 2WD (2019)",
-    "price": "16 560 €",
-    "image": "https://ci.encar.com/carpicture02/pic4262/42629007_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42629009"
+    "model": "Grandeur 프리미엄 (2015)",
+    "price": "14 410 €",
+    "image": "https://ci.encar.com/carpicture08/pic4298/42983620_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42983994"
   },
   {
     "id": 12,
-    "brand": "Kia",
-    "model": "K3 럭셔리 (2019)",
-    "price": "12 280 €",
-    "image": "https://ci.encar.com/carpicture05/pic4235/42359982_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42362244"
+    "brand": "KG모빌리티(쌍용)",
+    "model": "렉스턴 스포츠 디젤 2.2 4WD (2019)",
+    "price": "15 360 €",
+    "image": "https://ci.encar.com/carpicture10/pic4290/42903292_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42905398"
   }
 ]
