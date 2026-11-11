@@ -1,98 +1,82 @@
 [
   {
     "id": 1,
-    "brand": "Hyundai",
-    "model": "Tucson 디젤 2.0 2WD (2019)",
-    "price": "16 280 €",
-    "image": "https://ci.encar.com/carpicture06/pic4266/42663103_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42668339"
+    "brand": "Kia",
+    "model": "Sportage 디젤 2.0 2WD (2019)",
+    "price": "14 520 €",
+    "image": "https://ci.encar.com/carpicture02/pic4272/42721624_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42729447"
   },
   {
     "id": 2,
-    "brand": "Kia",
-    "model": "Morning 프레스티지 (2022)",
-    "price": "14 610 €",
-    "image": "https://ci.encar.com/carpicture03/pic4303/43039113_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/43040476"
+    "brand": "Hyundai",
+    "model": "Casper 스마트 (2022)",
+    "price": "13 640 €",
+    "image": "https://ci.encar.com/carpicture09/pic4279/42790107_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42791971"
   },
   {
     "id": 3,
     "brand": "Hyundai",
-    "model": "Tucson 디젤 2.0 2WD (2019)",
+    "model": "Grandeur 3.0 LPi 익스클루시브 (렌터카) (2017)",
     "price": "16 280 €",
-    "image": "https://ci.encar.com/carpicture06/pic4266/42663103_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42663103"
+    "image": "https://ci.encar.com/carpicture06/pic4036/40367804_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/40370425"
   },
   {
     "id": 4,
-    "brand": "Kia",
-    "model": "Morning 프레스티지 (2022)",
-    "price": "14 610 €",
-    "image": "https://ci.encar.com/carpicture03/pic4303/43039113_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/43039113"
+    "brand": "Hyundai",
+    "model": "Casper 스마트 (2022)",
+    "price": "14 080 €",
+    "image": "https://ci.encar.com/carpicture08/pic4278/42789920_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42791129"
   },
   {
     "id": 5,
-    "brand": "Kia",
-    "model": "Seltos 가솔린 1.6 터보 2WD (2019)",
-    "price": "16 630 €",
-    "image": "https://ci.encar.com/carpicture07/pic4307/43072131_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/43084096"
+    "brand": "Hyundai",
+    "model": "Casper 터보 인스퍼레이션 (2022)",
+    "price": "16 370 €",
+    "image": "https://ci.encar.com/carpicture05/pic4275/42757724_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42764792"
   },
   {
     "id": 6,
-    "brand": "Hyundai",
-    "model": "Sonata 2.0 (2021)",
-    "price": "15 830 €",
-    "image": "https://ci.encar.com/carpicture01/pic4311/43118650_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/43118686"
+    "brand": "Kia",
+    "model": "Sorento 디젤 2.0 2WD (2015)",
+    "price": "12 770 €",
+    "image": "https://ci.encar.com/carpicture09/pic4099/40990799_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/40998366"
   },
   {
     "id": 7,
-    "brand": "Hyundai",
-    "model": "Elantra 1.6 GDI 밸류 플러스 (2017)",
-    "price": "13 820 €",
-    "image": "https://ci.encar.com/carpicture10/pic4290/42901372_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42901375"
+    "brand": "Kia",
+    "model": "Sorento 디젤 2.0 2WD (2014)",
+    "price": "12 500 €",
+    "image": "https://ci.encar.com/carpicture02/pic4292/42922298_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42926175"
   },
   {
     "id": 8,
     "brand": "Hyundai",
-    "model": "Casper 모던 (2022)",
-    "price": "14 520 €",
-    "image": "https://ci.encar.com/carpicture09/pic4299/42994158_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42996007"
+    "model": "Venue 1.6 플럭스 (2021)",
+    "price": "16 270 €",
+    "image": "https://ci.encar.com/carpicture01/pic4291/42919576_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42921616"
   },
   {
     "id": 9,
-    "brand": "Kia",
-    "model": "Sorento 디젤 2.0 2WD (2016)",
-    "price": "13 470 €",
-    "image": "https://ci.encar.com/carpicture03/pic4273/42736739_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42739062"
+    "brand": "Hyundai",
+    "model": "Grandeur 3.0 익스클루시브 (2017)",
+    "price": "16 110 €",
+    "image": "https://ci.encar.com/carpicture03/pic4283/42830875_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42831361"
   },
   {
     "id": 10,
     "brand": "Hyundai",
-    "model": "Sonata 2.0 (2021)",
-    "price": "15 830 €",
-    "image": "https://ci.encar.com/carpicture01/pic4311/43118650_027.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/43118650"
-  },
-  {
-    "id": 11,
-    "brand": "Hyundai",
-    "model": "Casper 모던 (2022)",
-    "price": "14 520 €",
-    "image": "https://ci.encar.com/carpicture09/pic4299/42994158_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42994158"
-  },
-  {
-    "id": 12,
-    "brand": "Kia",
-    "model": "Sorento 디젤 2.0 2WD (2016)",
-    "price": "13 470 €",
-    "image": "https://ci.encar.com/carpicture03/pic4273/42736739_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
-    "encarUrl": "https://fem.encar.com/cars/detail/42736739"
+    "model": "Casper 터보 스마트 (2022)",
+    "price": "15 050 €",
+    "image": "https://ci.encar.com/carpicture03/pic4293/42934141_001.jpg?impolicy=heightRate&rh=768&cw=1280&ch=768&cg=Center&wtmk=https://ci.encar.com/wt_mark/w_mark_04.png",
+    "encarUrl": "https://fem.encar.com/cars/detail/42955951"
   }
 ]
